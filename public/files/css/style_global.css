@@ -224,11 +224,15 @@ body{
 .card-icon{
 	height: 7.4em;
 	margin: 1em auto;
+	backface-visibility: hidden;
+	webkit-backface-visibility: hidden;
 }
 .card-icon img{
 	height: 100%;
 	border-radius: 25px;
 	border: solid 3px rgba(255,255,255,0.3);
+	backface-visibility: hidden;
+	webkit-backface-visibility: hidden;
 }
 .card-text{
 	margin: 1.5em auto;
