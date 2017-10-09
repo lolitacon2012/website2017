@@ -215,6 +215,7 @@ body{
 .index-card-contents{
 	color: #FFF;
 	padding:40px 20px;
+	padding-bottom:3em;
 }
 .card-row{
 	margin: 0 auto;
@@ -252,6 +253,7 @@ body{
 @media (max-width: 768px) {
 	.index-card-contents{
 	padding:20px 12px;
+	padding-bottom:3em;
 }
 }
 
