@@ -188,15 +188,15 @@ body{
 }
 .red-card::before {
 	transform: skewY(-5deg);
-	background: linear-gradient(45deg,#F5B5CD,#E9BCD3);
+	background: linear-gradient(45deg,#D595BD,#E5B3B3);
 }
-.yellow-card::before{
+.purlpe-card::before{
 	transform: skewY(5deg);
-	background: linear-gradient(45deg,#EEE6BF,#E4EFCD);
+	background: linear-gradient(45deg,#C5B8D4,#BCBADE);
 }
 .green-card::before{
 	transform: skewY(-5deg);
-	background: linear-gradient(45deg,#A1D5D4,#A4DBD2);
+	background: linear-gradient(45deg,#A2C7D7,#A4DBD2);
 }
 .blue-card::before{
 	transform: skewY(5deg);
@@ -205,7 +205,7 @@ body{
 .red-card{
 	margin-top:15px;
 }
-.yellow-card{
+.purlpe-card{
 	margin-top:0px;
 }
 .green-card{
@@ -215,11 +215,24 @@ body{
 	margin-top:5px;
 }
 .index-card-contents{
+	color: #FFF;
 	padding:40px 20px;
 }
 .card-row{
 	margin: 0 auto;
 	padding: 0 auto;
+}
+.card-icon{
+	height: 7.4em;
+	margin: 1em auto;
+}
+.card-icon img{
+	height: 100%;
+	border-radius: 25px;
+	border: solid 3px rgba(255,255,255,0.3);
+}
+.card-text{
+	margin: 1.5em auto;
 }
 
 @media (max-width: 992px) {
@@ -288,4 +301,65 @@ body{
 }
 .vertical-margin-top{
 	margin-top:30px;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateX(180deg);
+		transform: ;
+	}
+
+.flip-container, .front, .back {
+	width: 7.4em;
+	height: 7.4em;
+}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s ease-in-out;
+    -moz-transition: 0.6s ease-in-out;
+    -o-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: relative;
+	-webkit-transform-origin: 50% 3.7em;    
+    -moz-transform-origin: 50% 3.7em;      
+    -o-transform-origin: 50% 3.7em;    
+    -ms-transform-origin: 50% 3.7em;  
+    transform-origin: 50% 3.7em;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateX(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);
+}
+
+
+/*fade animation for vue*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  opacity: 0
 }

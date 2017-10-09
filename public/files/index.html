@@ -76,30 +76,86 @@
       <div class="row card-row">
         <div class="col-lg-3 col-md-6 index-card red-card">
           <div class="index-card-contents">
-            <h2>最近の文章</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <div class="row">
+              <div class="card-icon">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                      <img src="img/zhihu.png"/>
+                    </div>
+                    <div class="back">
+                      <img src="img/zhihu_avatar.jpg"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="card-text">
+  <transition name="fade" mode="out-in">
+    <h4 v-bind:key="zhihu_message">
+      {{zhihu_message}}
+    </h4>
+  </transition>
+            </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 index-card yellow-card">
+        <div class="col-lg-3 col-md-6 index-card purlpe-card">
           <div class="index-card-contents">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <div class="row">
+              <div class="card-icon">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                      <img src="img/zhihu.png"/>
+                    </div>
+                    <div class="back">
+                      <img src="img/zhihu_avatar.jpg"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row"><div class="card-text"><h4>Zhihu.com</h4></div></div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 index-card green-card">
           <div class="index-card-contents">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <div class="row">
+              <div class="card-icon">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                      <img src="img/zhihu.png"/>
+                    </div>
+                    <div class="back">
+                      <img src="img/zhihu_avatar.jpg"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row"><div class="card-text"><h4>Zhihu.com</h4></div></div>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 index-card blue-card">
           <div class="index-card-contents">
-            <h2>知乎の回答</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <div class="row">
+              <div class="card-icon">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                      <img src="img/zhihu.png"/>
+                    </div>
+                    <div class="back">
+                      <img src="img/zhihu_avatar.jpg"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row"><div class="card-text"><h4>Zhihu.com</h4></div></div>
           </div>
         </div>
       </div>
