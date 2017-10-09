@@ -1,0 +1,291 @@
+/*Language related classes*/
+@font-face {
+    font-family: juliamo;
+    src: url(../fonts/juliamo.woff);
+}
+.juliamo { 
+	font-family: juliamo;
+}
+.tategaki {
+	-webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+
+/*Colors and patterns*/
+.bg-pale-blue{
+	background: #73AEFF;
+}
+
+.bg-pale-pink{
+	background: #E865A1;
+}
+
+.bg-transparent{
+	background: none;
+}
+
+body{
+	background-image: url("../img/pattern.jpg");
+    background-repeat: repeat;
+    font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", 游ゴシック, "Yu Gothic", sans-serif;
+}
+
+
+/*Special font effects*/
+.pink-first-character::first-letter{
+	color: #E865A1;
+}
+
+
+/*special nav effects*/
+#top-nav{
+	font-size: 1.1em;
+	background:none;
+	text-shadow: 0px 0px 10px #000000;
+	-webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    z-index: 9998;
+}
+#navbar_collapse_button{
+	color: #FFF;
+	border:none;
+}
+#top-nav.nav_pale_blue{
+	background: rgba(166,200,222,0.98);
+	text-shadow: 0px 0px 10px #FFFFCC;
+}
+@media (max-width: 992px) {
+	#top-nav{
+	background: #73AEFF;
+	text-shadow: 0px 0px 10px #FFFFCC;
+	}
+}
+
+
+/*index background*/
+.background-main{
+	background-image: url(../img/bg.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 100vh;
+	min-height: 800px;
+	background-position: center;
+	padding-top:90px;
+	margin-bottom: -50px;
+	z-index: -2; 
+}
+.background-main h1{
+	text-shadow: 0 2px 3px #fff, 2px 0 3px #fff, 0 -2px 3px #fff, -2px 0 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff, -2px 2px 3px #fff, 2px 2px 3px #fff;
+	color: #65a7ff;
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+.background-main h4{
+	color: #224252;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	margin: auto 2.6em;
+	line-height: 2em;
+}
+.too_short_main_background{
+
+}
+.jumbotron .container .tategaki{
+	margin-right:8%;
+}
+@media (max-width: 1200px) {
+	.background-main{
+		/*padding-bottom:250px;*/
+		padding-left:5px;
+		padding-right:5px;
+	}
+	.background-main h1{
+		letter-spacing: 3px;
+		font-weight: 500;
+		margin:1em 0.5em;
+	}
+.background-main h4{
+	margin: 2em 1em; 
+	font-size: 1.5em;
+	line-height: 1.7em;
+}
+}
+@media (max-width: 768px) {
+	.background-main h1{
+		letter-spacing: 3px;
+		font-weight: 500;
+		margin:0;
+	}
+.background-main h4{
+	margin: 2em 1em; 
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+}
+
+@media (max-width: 576px) {
+		.background-main{
+		/*padding-bottom:100px;*/
+	}
+		.background-main h1{
+		letter-spacing: 3px;
+		font-size: 1.5em;
+		font-weight: 500;
+	}
+.background-main h4{
+	margin: 0 0.6em;
+	font-size: 0.9em;
+	line-height: 1.2em;
+}
+}
+
+
+
+/*cards on index*/
+.index-card{
+	padding: 0;
+	z-index: 8000;
+	margin-bottom:5px;
+	-webkit-transition: margin-top .4s ease-in-out;
+    -moz-transition: margin-top .4s ease-in-out;
+    -o-transition: margin-top .4s ease-in-out;
+    transition: margin-top .4s ease-in-out;
+}
+.index-card:hover{
+
+}
+.index-card::before {
+	content: "";
+	height:100%;
+	width: 100%;
+	position: absolute;
+	display: block;
+	z-index: -1;
+	-webkit-transition: transform .4s ease-in-out;
+    -moz-transition: transform .4s ease-in-out;
+    -o-transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+}
+.index-card::after {
+	content: "";
+	top:0px;
+	height:100%;
+	width: 100%;
+	position: absolute;
+	display: block;
+	z-index: -2;
+	transform: skewY(-10deg);
+	background: linear-gradient(45deg,#dc416b,#e865a1);
+}
+.index-card:hover:before {
+	transform: skewY(0deg);
+}
+.red-card::before {
+	transform: skewY(-5deg);
+	background: linear-gradient(45deg,#F5B5CD,#E9BCD3);
+}
+.yellow-card::before{
+	transform: skewY(5deg);
+	background: linear-gradient(45deg,#EEE6BF,#E4EFCD);
+}
+.green-card::before{
+	transform: skewY(-5deg);
+	background: linear-gradient(45deg,#A1D5D4,#A4DBD2);
+}
+.blue-card::before{
+	transform: skewY(5deg);
+	background: linear-gradient(45deg,#95A6F2,#7099E1);
+}
+.red-card{
+	margin-top:15px;
+}
+.yellow-card{
+	margin-top:0px;
+}
+.green-card{
+	margin-top:15px;
+}
+.blue-card{
+	margin-top:5px;
+}
+.index-card-contents{
+	padding:40px 20px;
+}
+.card-row{
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+@media (max-width: 992px) {
+	.index-card{
+		margin: 0;
+	}
+	.index-card:hover{
+		margin: 0;
+	}
+	.index-card:hover:before {
+		transform: skewY(-3deg);
+	}
+	.index-card:before {
+		transform: skewY(-3deg);
+	}
+}
+
+@media (max-width: 768px) {
+	.index-card-contents{
+	padding:20px 12px;
+}
+}
+
+
+/*Bottom Footer*/
+.bottom-footer{
+	margin-top: 150px;
+	width: 100%;
+	height: 350px;
+	background-color: rgba(166,200,222,0.5);
+}
+.bottom-footer-greeting{
+	text-shadow: 0 2px 3px #fff, 2px 0 3px #fff, 0 -2px 3px #fff, -2px 0 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff, -2px 2px 3px #fff, 2px 2px 3px #fff;
+	color: #65a7ff;
+	letter-spacing: 12px;
+	margin: 120px auto;
+	margin-bottom:20px;
+	font-weight: 300;
+	font-size:3.2em;
+}
+@media (max-width: 992px) {
+	.bottom-footer-greeting{
+	letter-spacing: 2px;
+	margin: 80px auto;
+	margin-bottom:5px;
+	font-weight: 300;
+	font-size:1.6em;
+}
+.bottom-footer{
+	margin-top: 100px;
+	width: 100%;
+	height: 265px;
+	background-color: rgba(166,200,222,0.5);
+}
+}
+
+.bottom-footer-copyright{
+	margin: 20px auto;
+}
+
+
+/*Improvments on BootStrap*/
+.no-horizontal-padding-margin{
+	padding:0;
+	margin:0;
+}
+.vertical-margin-top{
+	margin-top:30px;
+}

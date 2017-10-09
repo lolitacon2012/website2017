@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal Website Project 2017">
+    <meta name="author" content="Liu Dake dhyz@me.com">
+    <link rel="icon" href="https://vignette.wikia.nocookie.net/survivor-org/images/3/34/L.jpg/revision/latest?cb=20130927203704">
+
+    <title>Liu Dake - WebSite</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style_global.css">
+  </head>
+
+  <body>
+    <div id="app">
+    <nav id="top-nav" class="navbar navbar-expand-md navbar-dark fixed-top" v-bind:class="{ nav_pale_blue: isNotOnTop }">
+      <button class="navbar-toggler" id="navbar_collapse_button" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link disabled" href="#">Blog</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link disabled" href="#">Gallery</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-right"><li class="nav-item">
+            <a class="nav-link disabled" href="#"><hr></a>
+          </li></ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item active">
+            <a class="nav-link disabled juliamo" href="#">Juliamo</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link disabled" href="#">日本語</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link disabled" href="#">Esperanto</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link disabled" href="#">中文</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link disabled" href="#">English</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron background-main">
+      <div class="container" v-bind:class="{ tategaki: useTategaki && !isTooShort}">
+      	<div style="margin:auto auto; min-height: 800px">
+        <h1 class="display-4 pink-first-character">やっはろー
+        </h1><br>
+        <h4>中国人システムエンジニア、<span>劉大可</span>です。</h4>
+        <h4>大学卒業してから、<br>ずっとシンガポールで働いています。</h4>
+        <h4>歴史が好き、<br>古典が好き、<br>神仏にも興味があるので、<br>よく巡礼の旅に出ます。</h4>
+        <h4>語学が好き、<br>読書が好き、</h4><h4>今が一番大好きです。</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid no-horizontal-padding-margin">
+      <!-- Example row of columns -->
+      <div class="row card-row">
+        <div class="col-lg-3 col-md-6 index-card red-card">
+          <div class="index-card-contents">
+            <h2>最近の文章</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 index-card yellow-card">
+          <div class="index-card-contents">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 index-card green-card">
+          <div class="index-card-contents">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 index-card blue-card">
+          <div class="index-card-contents">
+            <h2>知乎の回答</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="row">
+            <h1 class="bottom-footer-greeting pink-first-character">　「では、御機嫌よう。」　</h1>
+          </div>
+          <div class="row">
+            <p class="bottom-footer-copyright">© 2017 Liu Dake</p>
+          </div>
+        </div>
+      </div>
+        
+
+    </div> <!-- /container -->
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/index.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
+  
+
+    <audio controls="controls" style="display: none;"></audio>
+
+  </body>
+</html>
