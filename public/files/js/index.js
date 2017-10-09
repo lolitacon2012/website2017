@@ -28,25 +28,19 @@ $( window ).resize(function() {
 });
 
 
-//fetch data
-var dataFetch = new Promise((resolve, reject) => {
-	console.log("prepare to fetch");
-  // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
-  // In this example, we use setTimeout(...) to simulate async code. 
-  // In reality, you will probably be using something like XHR or an HTML5 API.
-  setTimeout(function(){
-    console.log("fetch done");
-    resolve("Success!"); // Yay! Everything went well!
-  }, 250);
-});
+//fetch zhihu data and update
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange=function() {
+    if (this.readyState == 4 && this.status == 200) {
+      prepareZhihuMessage(this.responseText);
+    }
+  };
+xhttp.open("GET", "http://gakumusume.com/get-api/fetch_zhihu_state?t=" + Math.random(), true);
+xhttp.send();
 
-dataFetch.then((successMessage) => {
-	console.log("success");
-  // successMessage is whatever we passed in the resolve(...) function above.
-  // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
-  console.log("Yay! " + successMessage);
-});
-
+function prepareZhihuMessage(obj){
+	console.log(obj);
+}
 
 //card messages
 setInterval(function(){
