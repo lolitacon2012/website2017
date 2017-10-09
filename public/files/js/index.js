@@ -41,12 +41,9 @@ xhttp.send();
 function prepareZhihuMessage(obj){
 	//{"answer":75,"post":2,"follower":1780,"profileUrl":"https://www.zhihu.com/people/xue-niang","name":"巫部親雲上","sex":"male"}
 	obj = JSON.parse(obj);
-	console.log(obj);
-	console.log(obj.answer);
-	console.log(obj["answer"]);
 	app.zhihu_message_list.push(obj["name"]);
-	app.zhihu_message_list.push(obj["follower"] + " Followers");
-	app.zhihu_message_list.push(obj["answer"] + " Answers");
+	app.zhihu_message_list.push(obj["follower"] + " フォロワー");
+	app.zhihu_message_list.push(obj["answer"] + " 回答数");
 }
 
 //card messages
