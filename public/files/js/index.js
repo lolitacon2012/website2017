@@ -39,7 +39,10 @@ xhttp.open("GET", "http://gakumusume.com/get-api/fetch_zhihu_state?t=" + Math.ra
 xhttp.send();
 
 function prepareZhihuMessage(obj){
-	console.log(obj);
+	//{"answer":75,"post":2,"follower":1780,"profileUrl":"https://www.zhihu.com/people/xue-niang","name":"巫部親雲上","sex":"male"}
+	app.zhihu_message_list.push(obj.name);
+	app.zhihu_message_list.push(obj.follower + " Followers");
+	app.zhihu_message_list.push(obj.answer + " Answers");
 }
 
 //card messages
