@@ -157,9 +157,7 @@ body{
     -o-transition: margin-top .4s ease-in-out;
     transition: margin-top .4s ease-in-out;
 }
-.index-card:hover{
 
-}
 .index-card::before {
 	content: "";
 	height:100%;
@@ -239,14 +237,15 @@ body{
 	.index-card{
 		margin: 0;
 	}
-	.index-card:hover{
-		margin: 0;
-	}
 	.index-card:hover:before {
 		transform: skewY(-3deg);
 	}
 	.index-card:before {
 		transform: skewY(-3deg);
+			-webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
 	}
 }
 
@@ -337,6 +336,7 @@ body{
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
+	webkit-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
