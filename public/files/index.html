@@ -16,11 +16,11 @@
   <body>
     <div id="app">
     <nav id="top-nav" class="navbar navbar-expand-md navbar-dark fixed-top" v-bind:class="{ nav_pale_blue: isNotOnTop }">
-      <button class="navbar-toggler" id="navbar_collapse_button" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" id="navbar_collapse_button" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div class="collapse navbar-collapse" id="navbarsTop">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home</a>
@@ -58,7 +58,7 @@
       </div>
     </nav>
 
-    <div class="jumbotron background-main">
+    <div class="jumbotron background-main" id="top-jumbotron">
       <div class="container" v-bind:class="{ tategaki: useTategaki && !isTooShort}">
       	<div style="margin:auto auto; min-height: 800px">
         <h1 class="display-4 pink-first-character">やっはろー
@@ -78,7 +78,64 @@
           <div class="index-card-contents">
             <div class="row">
               <div class="card-icon">
-                <div class="flip-container" v-bind:class="{flip: zhihu_state==1}" ontouchstart="this.classList.toggle('hover');">
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <img src="img/github.jpg"/>
+                    </div>
+                    <div class="back">
+                      <img src="img/github_avatar.jpg"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row"><div class="card-text"><h4>GitHub</h4></div></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 index-card purlpe-card">
+          <div class="index-card-contents">
+            <div class="row">
+              <div class="card-icon">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                      <img src="img/steam.jpg"/>
+                    </div>
+                    <div class="back">
+                      <img src="img/zhihu_avatar.jpg"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row"><div class="card-text"><h4>Steam</h4></div></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 index-card green-card">
+          <div class="index-card-contents">
+            <div class="row">
+              <div class="card-icon">
+                <div class="flip-container">
+                  <div class="flipper">
+                    <div class="front">
+                      <img src="img/esperanto.jpg"/>
+                    </div>
+                    <div class="back">
+                      <img src="img/github_avatar.jpg"/>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+            <div class="row"><div class="card-text"><h4>Duolingo</h4></div></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 index-card blue-card">
+          <div class="index-card-contents">
+            <div class="row">
+              <div class="card-icon">
+                <div class="flip-container" v-bind:class="{flip: zhihu_state==1}">
                   <div class="flipper">
                     <div class="front">
                       <img src="img/zhihu.png"/>
@@ -101,69 +158,12 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 index-card purlpe-card">
-          <div class="index-card-contents">
-            <div class="row">
-              <div class="card-icon">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                  <div class="flipper">
-                    <div class="front">
-                      <img src="img/zhihu.png"/>
-                    </div>
-                    <div class="back">
-                      <img src="img/zhihu_avatar.jpg"/>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div class="row"><div class="card-text"><h4>Zhihu.com</h4></div></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 index-card green-card">
-          <div class="index-card-contents">
-            <div class="row">
-              <div class="card-icon">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                  <div class="flipper">
-                    <div class="front">
-                      <img src="img/zhihu.png"/>
-                    </div>
-                    <div class="back">
-                      <img src="img/zhihu_avatar.jpg"/>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div class="row"><div class="card-text"><h4>Zhihu.com</h4></div></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 index-card blue-card">
-          <div class="index-card-contents">
-            <div class="row">
-              <div class="card-icon">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                  <div class="flipper">
-                    <div class="front">
-                      <img src="img/zhihu.png"/>
-                    </div>
-                    <div class="back">
-                      <img src="img/zhihu_avatar.jpg"/>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div class="row"><div class="card-text"><h4>Zhihu.com</h4></div></div>
-          </div>
-        </div>
       </div>
       
       <div class="bottom-footer">
         <div class="container">
           <div class="row">
-            <h1 class="bottom-footer-greeting pink-first-character">　「では、御機嫌よう。」　</h1>
+            <h1 class="bottom-footer-greeting pink-first-character">綺麗なものを探しに行こう。</h1>
           </div>
           <div class="row">
             <p class="bottom-footer-copyright">© 2017 Liu Dake</p>

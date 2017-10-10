@@ -16,12 +16,13 @@ var app = new Vue({
 })
 
 //initialize variables
-app.isNotOnTop = ($(document).scrollTop() >= 20);
+app.isNotOnTop = ($(window).scrollTop() >= 20);
 app.isTooShort = false;
 
 //initialize events
-$(document).scroll(function() {
-  app.isNotOnTop = ($(document).scrollTop() >= 20);
+$(window).scroll(function() {
+  app.isNotOnTop = ($(window).scrollTop() >= 20);
+  console.log($(window).scrollTop());
 });
 $( window ).resize(function() {
   app.isTooShort = false;

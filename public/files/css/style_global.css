@@ -1,3 +1,4 @@
+html, body {margin: 0; overflow-x: hidden}
 /*Language related classes*/
 @font-face {
     font-family: juliamo;
@@ -104,6 +105,7 @@ body{
 		/*padding-bottom:250px;*/
 		padding-left:5px;
 		padding-right:5px;
+		min-height: 800px;
 	}
 	.background-main h1{
 		letter-spacing: 3px;
@@ -117,6 +119,11 @@ body{
 }
 }
 @media (max-width: 768px) {
+	.background-main{
+		/*padding-bottom:250px;*/
+		height: 75vh;
+		min-height: 750px;
+	}
 	.background-main h1{
 		letter-spacing: 3px;
 		font-weight: 500;
@@ -131,18 +138,27 @@ body{
 
 @media (max-width: 576px) {
 		.background-main{
-		/*padding-bottom:100px;*/
+		/*padding-bottom:250px;*/
+		height: 60vh;
+		min-height: 560px;
 	}
 		.background-main h1{
 		letter-spacing: 3px;
 		font-size: 1.5em;
 		font-weight: 500;
+		margin-right:4%;
+
 	}
 .background-main h4{
 	margin: 0 0.6em;
 	font-size: 0.9em;
 	line-height: 1.2em;
 }
+}
+@media (max-width: 370px) {
+		.background-main h1{
+		margin-right: 0;
+	}
 }
 
 
@@ -177,7 +193,7 @@ body{
 	width: 100%;
 	position: absolute;
 	display: block;
-	z-index: -2;
+	z-index: -3000;
 	transform: skewY(-10deg);
 	background: linear-gradient(45deg,#dc416b,#e865a1);
 }
@@ -216,6 +232,7 @@ body{
 	color: #FFF;
 	padding:40px 20px;
 	padding-bottom:3em;
+	text-shadow: 0px 2px 4px #434;
 }
 .card-row{
 	margin: 0 auto;
@@ -224,15 +241,11 @@ body{
 .card-icon{
 	height: 7.4em;
 	margin: 1em auto;
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
 }
 .card-icon img{
 	height: 100%;
 	border-radius: 25px;
 	border: solid 3px rgba(255,255,255,0.3);
-	backface-visibility: hidden;
-	-webkit-backface-visibility: hidden;
 }
 .card-text{
 	margin: 1.5em auto;
@@ -284,12 +297,12 @@ body{
 	margin: 80px auto;
 	margin-bottom:5px;
 	font-weight: 300;
-	font-size:1.6em;
+	font-size:1.4em;
 }
 .bottom-footer{
 	margin-top: 100px;
 	width: 100%;
-	height: 265px;
+	height: 215px;
 	background-color: rgba(166,200,222,0.5);
 }
 }
