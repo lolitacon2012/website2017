@@ -77,8 +77,8 @@ function prepareSteamMessage(obj){
   obj = JSON.parse(obj);
   app.steam_online_state = obj.player_state.personastate;
   app.steam_message_list.push(obj.player_state.personaname);
-  for(var game in obj.game_list.games){
-    console.log(game);
+  for(var i=0;i<obj.game_list.total_count;i++){
+    var game = obj.game_list.games[i];
     app.steam_message_list.push(game.name);
     app.steam_game_icon_list.push("https://steamdb.info/static/camo/apps/"+game.appid+"/header.jpg");
   }
