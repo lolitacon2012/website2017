@@ -101,7 +101,7 @@ setInterval(function(){
       app.steam_front_img = app.steam_game_icon_list[app.steam_state];
     }
   }
-}, 2300);
+}, 1400);
 
 var sorry = function(){
   swal({
