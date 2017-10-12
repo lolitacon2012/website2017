@@ -358,7 +358,7 @@ body{
 }
 
 .flip-container, .front, .back {
-	width: 7.4em;
+	width: 20em;
 	height: 7.4em;
 }
 
@@ -386,6 +386,14 @@ body{
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+.back img{
+	margin:auto auto;
+	display: inherit;
+}
+.front img{
+	margin:auto auto;
+	display: inherit;
 }
 
 /* front pane, placed above back */

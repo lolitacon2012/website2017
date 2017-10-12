@@ -23,7 +23,7 @@ var app = new Vue({
       return this.steam_message_list[this.steam_state];
     },
     steam_flip: function (){
-      return (this.steam_state%2 == 0);
+      return (this.steam_state%2 == 1);
     },
 
   }
@@ -37,15 +37,15 @@ var card_global_state = 0;
 //initialize events
 $(window).scroll(function() {
   var st = $(window).scrollTop();
-   if (st > lastScrollTop){
-     app.hideTopBarForMobile = app.isNotOnTop && $( "#navbar_collapse_button" ).hasClass( "collapsed" );
-   } else {
-     app.hideTopBarForMobile = false;
-   }
-   lastScrollTop = $(window).scrollTop();
+  if (st > lastScrollTop){
+   app.hideTopBarForMobile = app.isNotOnTop && $( "#navbar_collapse_button" ).hasClass( "collapsed" );
+ } else {
+   app.hideTopBarForMobile = false;
+ }
+ lastScrollTop = $(window).scrollTop();
 
-  app.isNotOnTop = ($(window).scrollTop() >= 25);
-  console.log($(window).scrollTop());
+ app.isNotOnTop = ($(window).scrollTop() >= 25);
+ console.log($(window).scrollTop());
 });
 
 
@@ -90,11 +90,15 @@ function prepareSteamMessage(obj){
 
 //card messages for zhihu
 setInterval(function(){
-	app.zhihu_state = ((app.zhihu_state + 1)%(app.zhihu_message_list.length));
-	app.steam_state = ((app.steam_state + 1)%(app.steam_message_list.length));
-  if(app.steam_flip){
-    app.steam_front_img = app.steam_game_icon_list[app.steam_state];
-  }else{
-    app.steam_back_img = app.steam_game_icon_list[app.steam_state];
+  var r = Math.random();
+  if(r>0.75){
+    app.zhihu_state = ((app.zhihu_state + 1)%(app.zhihu_message_list.length));
+  }else if(r>0.5){
+    app.steam_state = ((app.steam_state + 1)%(app.steam_message_list.length));
+    if(app.steam_flip){
+      app.steam_back_img = app.steam_game_icon_list[app.steam_state];
+    }else{
+      app.steam_front_img = app.steam_game_icon_list[app.steam_state];
+    }
   }
-}, 1000);
+}, 2300);
