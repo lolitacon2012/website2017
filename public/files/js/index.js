@@ -102,3 +102,13 @@ setInterval(function(){
     }
   }
 }, 2300);
+
+var sorry = function(){
+  swal({
+  title: "Sorry...",
+  text: "Site is under construction",
+  icon: "http://pictogram2.com/p/p0582/i/m.png",
+  button: "I see...",
+});
+}
+sorry();

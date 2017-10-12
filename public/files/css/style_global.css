@@ -242,6 +242,7 @@ body{
 .card-icon{
 	height: 7.4em;
 	margin: 1em auto;
+	position: relative;
 }
 .card-icon img{
 	height: 100%;
@@ -351,6 +352,10 @@ body{
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
+	position: absolute;
+	margin:auto;
+    left: -9999px;
+    right: -9999px;
 }
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
@@ -358,7 +363,7 @@ body{
 }
 
 .flip-container, .front, .back {
-	width: 7.4em;
+	width: 20em;
 	height: 7.4em;
 }
 
