@@ -7,6 +7,12 @@ var app = new Vue({
     useTategaki: true,
     zhihu_state: 0,
     zhihu_message_list: ["知乎"],
+    steam_state: 0,
+    steam_message_list: ["Steam"],
+    steam_game_icon_list: ["Steam"],
+    steam_online_state: -1,
+    steam_front_img: "img/steam.jpg",
+    steam_back_img: "img/cake.png",
     search_recommend_keyword: "Search recommend"
   },
   computed: {
@@ -19,6 +25,7 @@ var app = new Vue({
 //initialize variables
 app.isNotOnTop = ($(window).scrollTop() >= 25);
 var lastScrollTop = $(window).scrollTop();
+var card_global_state = 0;
 
 //initialize events
 $(window).scroll(function() {
@@ -46,15 +53,35 @@ xhttp.open("GET", "http://gakumusume.com/get-api/fetch_zhihu_state?t=" + Math.ra
 xhttp.send();
 
 function prepareZhihuMessage(obj){
-	//{"answer":75,"post":2,"follower":1780,"profileUrl":"https://www.zhihu.com/people/xue-niang","name":"巫部親雲上","sex":"male"}
 	obj = JSON.parse(obj);
 	app.zhihu_message_list.push(obj["name"]);
 	app.zhihu_message_list.push(obj["follower"] + " フォロワー");
 	app.zhihu_message_list.push(obj["answer"] + " 回答数");
 }
 
-//card messages
+
+//fetch steam data and update
+xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange=function() {
+  if (this.readyState == 4 && this.status == 200) {
+    prepareSteamMessage(this.responseText);
+  }
+};
+xhttp.open("GET", "http://gakumusume.com/get-api/fetch_steam_state?t=" + Math.random(), true);
+xhttp.send();
+
+function prepareSteamMessage(obj){
+  obj = JSON.parse(obj);
+  app.steam_online_state = obj.player_state.personastate;
+  app.steam_message_list.push(obj.player_state.personaname);
+  for(var game in obj.game_list.games){
+    app.steam_message_list.push("<small>Recently Played</small>" + game.name);
+    app.steam_game_icon_list.push("https://steamdb.info/static/camo/apps/"+game.appid+"/header.jpg");
+  }
+}
+
+//card messages for zhihu
 setInterval(function(){
 	app.zhihu_state = ((app.zhihu_state + 1)%(app.zhihu_message_list.length));
-	console.log(app.zhihu_state);
-}, 5000);
+	app.steam_state = ((app.steam_state + 1)%(app.steam_message_list.length));
+}, 1000);
