@@ -70,7 +70,7 @@ app.get('/get-api/fetch_steam_state',function(req,res){
 		s = {
 			host: 'api.steampowered.com',
 			port: 443,
-			path: '/IPlayerService/GetRecentlyPlayedGames/v0001/?key='+steamApiKey+'&steamids='+steamIdKey,
+			path: '/IPlayerService/GetRecentlyPlayedGames/v0001/?key='+steamApiKey+'&steamid='+steamIdKey+'&format=json',
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json'
