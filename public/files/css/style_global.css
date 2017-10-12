@@ -358,7 +358,7 @@ body{
 }
 
 .flip-container, .front, .back {
-	width: 20em;
+	width: 7.4em;
 	height: 7.4em;
 }
 
@@ -410,9 +410,9 @@ body{
 
 
 /*fade animation for vue*/
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active, .fade-leave-active, .can-be-invisible{
 	transition: opacity .1s
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+.fade-enter, .fade-leave-to, .invisible{
 	opacity: 0
 }
