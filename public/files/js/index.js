@@ -3,6 +3,7 @@ var app = new Vue({
   el: '#app',
   data: {
   	isNotOnTop: false,
+    hideTopBarForMobile: false,
     useTategaki: true,
     zhihu_state: 0,
     zhihu_message_list: ["知乎"],
@@ -16,11 +17,19 @@ var app = new Vue({
 })
 
 //initialize variables
-app.isNotOnTop = ($(window).scrollTop() >= 20);
+app.isNotOnTop = ($(window).scrollTop() >= 25);
 
 //initialize events
 $(window).scroll(function() {
-  app.isNotOnTop = ($(window).scrollTop() >= 20);
+  var st = $(window).scrollTop();
+   if (st > lastScrollTop){
+     app.hideTopBarForMobile = app.isNotOnTop;
+   } else {
+     app.hideTopBarForMobile = false;
+   }
+   lastScrollTop = st;
+
+  app.isNotOnTop = ($(window).scrollTop() >= 25);
   console.log($(window).scrollTop());
 });
 
