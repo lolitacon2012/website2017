@@ -18,16 +18,17 @@ var app = new Vue({
 
 //initialize variables
 app.isNotOnTop = ($(window).scrollTop() >= 25);
+var lastScrollTop = $(window).scrollTop();
 
 //initialize events
 $(window).scroll(function() {
   var st = $(window).scrollTop();
    if (st > lastScrollTop){
-     app.hideTopBarForMobile = app.isNotOnTop;
+     app.hideTopBarForMobile = app.isNotOnTop && $( "#navbar_collapse_button" ).hasClass( "collapsed" );
    } else {
      app.hideTopBarForMobile = false;
    }
-   lastScrollTop = st;
+   lastScrollTop = $(window).scrollTop();
 
   app.isNotOnTop = ($(window).scrollTop() >= 25);
   console.log($(window).scrollTop());

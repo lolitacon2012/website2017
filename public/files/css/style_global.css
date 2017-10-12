@@ -45,10 +45,10 @@ body{
 	font-size: 0.9em;
 	background:none;
 	text-shadow: 0px 0px 10px #000000;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	z-index: 9998;
 	padding:0 1rem;
 }
@@ -62,7 +62,7 @@ body{
 }
 #top-nav.nav_hidden{
 	text-shadow: none;
-	top:-140px;
+	top:-50px;
 }
 @media (max-width: 992px) {
 	#top-nav{
@@ -169,10 +169,10 @@ body{
 	padding: 0;
 	z-index: 8000;
 	margin-bottom:5px;
-	-webkit-transition: margin-top .4s ease-in-out;
-	-moz-transition: margin-top .4s ease-in-out;
-	-o-transition: margin-top .4s ease-in-out;
-	transition: margin-top .4s ease-in-out;
+	-webkit-transition: margin-top .3s ease-out;
+	-moz-transition: margin-top .3s ease-out;
+	-o-transition: margin-top .3s ease-out;
+	transition: margin-top .3s ease-out;
 }
 
 .index-card::before {
@@ -182,10 +182,10 @@ body{
 	position: absolute;
 	display: block;
 	z-index: -1;
-	-webkit-transition: transform .4s ease-in-out;
-	-moz-transition: transform .4s ease-in-out;
-	-o-transition: transform .4s ease-in-out;
-	transition: transform .4s ease-in-out;
+	-webkit-transition: transform .3s ease-out;
+	-moz-transition: transform .3s ease-out;
+	-o-transition: transform .3s ease-out;
+	transition: transform .3s ease-out;
 }
 .index-card::after {
 	content: "";
@@ -364,10 +364,10 @@ body{
 
 /* flip speed goes here */
 .flipper {
-	-webkit-transition: 0.6s ease-in-out;
-	-moz-transition: 0.6s ease-in-out;
-	-o-transition: 0.6s ease-in-out;
-	transition: 0.6s ease-in-out;
+	-webkit-transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+	transition: 0.3s ease-out;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -403,7 +403,7 @@ body{
 
 /*fade animation for vue*/
 .fade-enter-active, .fade-leave-active {
-	transition: opacity .2s
+	transition: opacity .1s
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
 	opacity: 0
