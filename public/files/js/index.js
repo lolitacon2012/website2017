@@ -23,7 +23,7 @@ var app = new Vue({
       return this.steam_message_list[this.steam_state];
     },
     steam_flip: function (){
-      return (this.steam_state%2 == 1);
+      return (this.steam_state%2 == 0);
     },
 
   }
