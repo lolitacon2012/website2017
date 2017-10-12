@@ -54,21 +54,36 @@ app.get('/get-api/fetch_zhihu_state',function(req,res){
 });
 
 app.get('/get-api/fetch_steam_state',function(req,res){
+	var steam_result = {};
 	var s = {
 		host: 'api.steampowered.com',
 		port: 443,
-		path: '/ISteamUser/GetPlayerSummaries/v0002/?key='+steamApiKey+'&steamids='+steamIdKey,
+		path: '/ISteamUser/GetPlayerSummaries/v0002/?key='+steamApiKey+'&steamids='+steamIdKey+'&format=json',
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json'
 		}
 	};
 	getJSON(s, function(statusCode, result) {
-    	console.log("onResult: (" + statusCode + ")" + JSON.stringify(result));
-    	res.setHeader('Content-Type', 'application/json');
-		res.send(result.response.players[0]);
-	});
+		console.log("onResult: (" + statusCode + ")" + JSON.stringify(result));
+		steam_result["player_state"] = result.response.players[0];
+		s = {
+			host: 'api.steampowered.com',
+			port: 443,
+			path: '/IPlayerService/GetRecentlyPlayedGames/v0001/?key='+steamApiKey+'&steamids='+steamIdKey,
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		};
 
+		getJSON(s, function(statusCode, result) {
+			console.log("onResult: (" + statusCode + ")" + JSON.stringify(result));
+			steam_result["game_list"] = result.response;
+			res.setHeader('Content-Type', 'application/json');
+			res.send(steam_result);
+		});
+	});
 });
 
 var server = app.listen(8964, function () {
