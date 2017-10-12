@@ -1,6 +1,10 @@
 var express = require('express');
 var zhihu = require('zhihu');
 var app = express();
+var SteamApi = require('steam-api');
+ 
+var steamUser = new SteamApi.User('918C2026B22CDA2B960E6F8B4C0E5A17', '76561198044961500');
+console.log(steamUser);
 
 app.get('/hello', function (req, res) {
   res.send('Hello World!');
