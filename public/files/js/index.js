@@ -18,6 +18,9 @@ var app = new Vue({
   computed: {
     zhihu_message: function () {
       return this.zhihu_message_list[this.zhihu_state];
+    },
+    steam_message: function () {
+      return this.steam_message_list[this.steam_state];
     }
   }
 })
