@@ -3,39 +3,35 @@ var app = new Vue({
   el: '#app',
   data: {
   	isNotOnTop: false,
-    isTooShort: false,
     useTategaki: true,
     zhihu_state: 0,
-    zhihu_message_list: ["zhihu.com"],
+    zhihu_message_list: ["知乎"],
+    search_recommend_keyword: "Search recommend"
   },
   computed: {
-  zhihu_message: function () {
-    return this.zhihu_message_list[this.zhihu_state];
+    zhihu_message: function () {
+      return this.zhihu_message_list[this.zhihu_state];
+    }
   }
-}
 })
 
 //initialize variables
 app.isNotOnTop = ($(window).scrollTop() >= 20);
-app.isTooShort = false;
 
 //initialize events
 $(window).scroll(function() {
   app.isNotOnTop = ($(window).scrollTop() >= 20);
   console.log($(window).scrollTop());
 });
-$( window ).resize(function() {
-  app.isTooShort = false;
-});
 
 
 //fetch zhihu data and update
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange=function() {
-    if (this.readyState == 4 && this.status == 200) {
-      prepareZhihuMessage(this.responseText);
-    }
-  };
+  if (this.readyState == 4 && this.status == 200) {
+    prepareZhihuMessage(this.responseText);
+  }
+};
 xhttp.open("GET", "http://gakumusume.com/get-api/fetch_zhihu_state?t=" + Math.random(), true);
 xhttp.send();
 

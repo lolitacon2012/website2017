@@ -1,190 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Personal Website Project 2017">
-    <meta name="author" content="Liu Dake dhyz@me.com">
-    <link rel="icon" href="https://vignette.wikia.nocookie.net/survivor-org/images/3/34/L.jpg/revision/latest?cb=20130927203704">
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Personal Website Project 2017">
+		<meta name="author" content="Liu Dake dhyz@me.com">
+		<link rel="icon" href="https://vignette.wikia.nocookie.net/survivor-org/images/3/34/L.jpg/revision/latest?cb=20130927203704">
 
-    <title>Liu Dake - WebSite</title>
+		<title>Liu Dake - WebSite</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style_global.css">
-  </head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style_global.css">
+	</head>
 
-  <body>
-    <div id="app">
-    <nav id="top-nav" class="navbar navbar-expand-md navbar-dark fixed-top" v-bind:class="{ nav_pale_blue: isNotOnTop }">
-      <button class="navbar-toggler" id="navbar_collapse_button" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+	<body>
+		<div id="app">
+			<nav id="top-nav" class="navbar navbar-expand-md navbar-dark fixed-top" v-bind:class="{ nav_pale_blue: isNotOnTop }">
+				<button class="navbar-toggler" id="navbar_collapse_button" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-      <div class="collapse navbar-collapse" id="navbarsTop">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link disabled" href="#">Blog</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link disabled" href="#">Gallery</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav navbar-right"><li class="nav-item">
-            <a class="nav-link disabled" href="#"><hr></a>
-          </li></ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item active">
-            <a class="nav-link disabled juliamo" href="#">Juliamo</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link disabled" href="#">日本語</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link disabled" href="#">Esperanto</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link disabled" href="#">中文</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link disabled" href="#">English</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+				<div class="collapse navbar-collapse" id="navbarsTop">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link disabled" href="#">Blog</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link disabled" href="#">Gallery</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav navbar-right"><li class="nav-item">
+						<a class="nav-link disabled" href="#"><hr></a>
+					</li></ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="nav-item active">
+							<a class="nav-link disabled juliamo" href="#">Juliamo</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link disabled" href="#">日本語</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link disabled" href="#">Esperanto</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link disabled" href="#">中文</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link disabled" href="#">English</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 
-    <div class="jumbotron background-main" id="top-jumbotron">
-      <div class="container" v-bind:class="{ tategaki: useTategaki && !isTooShort}">
-      	<div style="margin:auto auto; min-height: 800px">
-        <h1 class="display-4 pink-first-character">やっはろー
-        </h1><br>
-        <h4>中国人システムエンジニア、<span>劉大可</span>です。</h4>
-        <h4>大学卒業してから、<br>ずっとシンガポールで働いています。</h4>
-        <h4>歴史が好き、<br>古典が好き、<br>神仏にも興味があるので、<br>よく巡礼の旅に出ます。</h4>
-        <h4>語学が好き、<br>読書が好き、</h4><h4>今が一番大好きです。</h4>
-        </div>
-      </div>
-    </div>
+			<div class="jumbotron background-main" id="top-jumbotron">
+				<div class="container" v-bind:class="{ tategaki: useTategaki }">
+					<div style="margin:auto auto; min-height: 800px">
+						<h1 class="display-4 pink-first-character">やっはろー
+						</h1><br>
+						<h4>中国人システムエンジニア、<span>劉大可</span>です。</h4>
+						<h4>大学卒業してから、<br>ずっとシンガポールで働いています。</h4>
+						<h4>歴史が好き、<br>古典が好き、<br>神仏にも興味があるので、<br>よく巡礼の旅に出ます。</h4>
+						<h4>語学が好き、<br>読書が好き、</h4><h4>今が一番大好きです。</h4>
+					</div>
+				</div>
+			</div>
 
-    <div class="container-fluid no-horizontal-padding-margin">
-      <!-- Example row of columns -->
-      <div class="row card-row">
-        <div class="col-lg-3 col-md-6 index-card red-card">
-          <div class="index-card-contents">
-            <div class="row">
-              <div class="card-icon">
-                <div class="flip-container">
-                  <div class="flipper">
-                    <div class="front">
-                      <img src="img/github.jpg"/>
-                    </div>
-                    <div class="back">
-                      <img src="img/github_avatar.jpg"/>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div class="row"><div class="card-text"><h4>GitHub</h4></div></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 index-card purlpe-card">
-          <div class="index-card-contents">
-            <div class="row">
-              <div class="card-icon">
-                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                  <div class="flipper">
-                    <div class="front">
-                      <img src="img/steam.jpg"/>
-                    </div>
-                    <div class="back">
-                      <img src="img/zhihu_avatar.jpg"/>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div class="row"><div class="card-text"><h4>Steam</h4></div></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 index-card green-card">
-          <div class="index-card-contents">
-            <div class="row">
-              <div class="card-icon">
-                <div class="flip-container">
-                  <div class="flipper">
-                    <div class="front">
-                      <img src="img/esperanto.jpg"/>
-                    </div>
-                    <div class="back">
-                      <img src="img/github_avatar.jpg"/>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div class="row"><div class="card-text"><h4>Duolingo</h4></div></div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 index-card blue-card">
-          <div class="index-card-contents">
-            <div class="row">
-              <div class="card-icon">
-                <div class="flip-container" v-bind:class="{flip: zhihu_state==1}">
-                  <div class="flipper">
-                    <div class="front">
-                      <img src="img/zhihu.png"/>
-                    </div>
-                    <div class="back">
-                      <img src="img/zhihu_avatar.jpg"/>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div class="row">
-            <div class="card-text">
-  <transition name="fade" mode="out-in">
-    <h4 v-bind:key="zhihu_message">
-      {{zhihu_message}}
-    </h4>
-  </transition>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="bottom-footer">
-        <div class="container">
-          <div class="row">
-            <h1 class="bottom-footer-greeting pink-first-character">綺麗なものを探しに行こう。</h1>
-          </div>
-          <div class="row">
-            <p class="bottom-footer-copyright">© 2017 Liu Dake</p>
-          </div>
-        </div>
-      </div>
-        
+			<div class="container-fluid no-horizontal-padding-margin">
+				<!-- Example row of columns -->
+				<div class="row card-row">
+					<div class="col-lg-3 col-md-6 index-card red-card">
+						<div class="index-card-contents">
+							<div class="row">
+								<div class="card-icon">
+									<div class="flip-container">
+										<div class="flipper">
+											<div class="front">
+												<img src="img/github.jpg"/>
+											</div>
+											<div class="back">
+												<img src="img/github_avatar.jpg"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row"><div class="card-text"><h4>GitHub</h4></div></div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 index-card purlpe-card">
+						<div class="index-card-contents">
+							<div class="row">
+								<div class="card-icon">
+									<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+										<div class="flipper">
+											<div class="front">
+												<img src="img/steam.jpg"/>
+											</div>
+											<div class="back">
+												<img src="img/zhihu_avatar.jpg"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row"><div class="card-text"><h4>Steam</h4></div></div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 index-card green-card">
+						<div class="index-card-contents">
+							<div class="row">
+								<div class="card-icon">
+									<div class="flip-container">
+										<div class="flipper">
+											<div class="front">
+												<img src="img/esperanto.jpg"/>
+											</div>
+											<div class="back">
+												<img src="img/github_avatar.jpg"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row"><div class="card-text"><h4>Duolingo</h4></div></div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 index-card blue-card">
+						<div class="index-card-contents">
+							<div class="row">
+								<div class="card-icon">
+									<div class="flip-container" v-bind:class="{flip: zhihu_state==1}">
+										<div class="flipper">
+											<div class="front">
+												<img src="img/zhihu.png"/>
+											</div>
+											<div class="back">
+												<img src="img/zhihu_avatar.jpg"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="card-text">
+									<transition name="fade" mode="out-in">
+										<h4 v-bind:key="zhihu_message">
+											{{zhihu_message}}
+										</h4>
+									</transition>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    </div> <!-- /container -->
-</div>
+				<div class="bottom-footer">
+					<div class="container">
+						<div class="row">
+							<h1 class="bottom-footer-greeting pink-first-character">綺麗なものを探しに行こう。</h1>
+						</div>
+						<div class="input-group" id="bottom_search_bar_container">
+						<input type="text" class="form-control" :placeholder="search_recommend_keyword" id="search-bar">
+							<span class="input-group-btn">
+								<button class="btn btn-pink" type="button">Go</button>
+							</span>
+						</div>
+						<div class="row">
+							<p class="bottom-footer-copyright">© 2017 Liu Dake</p>
+						</div>
+					</div>
+				</div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="js/index.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
-  
 
-    <audio controls="controls" style="display: none;"></audio>
+			</div> <!-- /container -->
+		</div>
 
-  </body>
-</html>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="js/index.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
+
+
+		<audio controls="controls" style="display: none;"></audio>
+
+	</body>
+	</html>
