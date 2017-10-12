@@ -66,7 +66,7 @@ app.get('/get-api/fetch_steam_state',function(req,res){
 	getJSON(s, function(statusCode, result) {
     	console.log("onResult: (" + statusCode + ")" + JSON.stringify(result));
     	res.setHeader('Content-Type', 'application/json');
-		res.send(result);
+		res.send(result.response.players[0]);
 	});
 
 });
