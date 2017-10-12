@@ -78,7 +78,8 @@ function prepareSteamMessage(obj){
   app.steam_online_state = obj.player_state.personastate;
   app.steam_message_list.push(obj.player_state.personaname);
   for(var game in obj.game_list.games){
-    app.steam_message_list.push("<small>Recently Played</small>" + game.name);
+    console.log(game);
+    app.steam_message_list.push(game.name);
     app.steam_game_icon_list.push("https://steamdb.info/static/camo/apps/"+game.appid+"/header.jpg");
   }
 }
