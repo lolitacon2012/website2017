@@ -97,13 +97,13 @@
 						<div class="index-card-contents">
 							<div class="row">
 								<div class="card-icon">
-									<div class="flip-container">
+									<div class="flip-container" v-bind:class="{flip: steam_flip}">
 										<div class="flipper">
 											<div class="front">
-												<img :src="steam_front_img"/>
+													<img :src="steam_front_img"/>
 											</div>
 											<div class="back">
-												<img :src="steam_back_img"/>
+													<img :src="steam_back_img"/>
 											</div>
 										</div>
 									</div>

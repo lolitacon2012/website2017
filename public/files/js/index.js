@@ -9,7 +9,7 @@ var app = new Vue({
     zhihu_message_list: ["知乎"],
     steam_state: 0,
     steam_message_list: ["Steam"],
-    steam_game_icon_list: ["Steam"],
+    steam_game_icon_list: ["img/steam.jpg","img/cake.png"],
     steam_online_state: -1,
     steam_front_img: "img/steam.jpg",
     steam_back_img: "img/cake.png",
@@ -21,7 +21,11 @@ var app = new Vue({
     },
     steam_message: function () {
       return this.steam_message_list[this.steam_state];
-    }
+    },
+    steam_flip: function (){
+      return (this.steam_state%2 == 1);
+    },
+
   }
 })
 
@@ -88,4 +92,9 @@ function prepareSteamMessage(obj){
 setInterval(function(){
 	app.zhihu_state = ((app.zhihu_state + 1)%(app.zhihu_message_list.length));
 	app.steam_state = ((app.steam_state + 1)%(app.steam_message_list.length));
+  if(app.steam_flip){
+    app.steam_front_img = app.steam_game_icon_list[app.steam_state];
+  }else{
+    app.steam_back_img = app.steam_game_icon_list[app.steam_state];
+  }
 }, 1000);
