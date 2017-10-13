@@ -62,7 +62,7 @@ body{
 }
 #top-nav.nav_hidden{
 	text-shadow: none;
-	top:-50px;
+	top:-40px;
 }
 @media (max-width: 992px) {
 	#top-nav{
@@ -251,13 +251,14 @@ body{
 }
 .card-text{
 	margin: 1.5em auto;
-	overflow:hidden;
+	width:7em;
 }
 .card-text h4{
 	margin-left: -100%;
     margin-right: -100%;
     text-align: center;
     word-wrap: break-word;
+    font-size: 1.4em;
 }
 
 @media (max-width: 992px) {

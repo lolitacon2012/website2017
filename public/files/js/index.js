@@ -37,15 +37,15 @@ var card_global_state = 0;
 //initialize events
 $(window).scroll(function() {
   var st = $(window).scrollTop();
+  console.log($( "#navbar_collapse_button" ).hasClass( "collapsed" ));
   if (st > lastScrollTop){
-   app.hideTopBarForMobile = app.isNotOnTop && $( "#navbar_collapse_button" ).hasClass( "collapsed" );
+   app.hideTopBarForMobile = app.isNotOnTop && (!$( "#navbarsTop" ).hasClass( "show" ));
  } else {
    app.hideTopBarForMobile = false;
  }
  lastScrollTop = $(window).scrollTop();
 
  app.isNotOnTop = ($(window).scrollTop() >= 25);
- console.log($(window).scrollTop());
 });
 
 
