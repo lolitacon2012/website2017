@@ -12,6 +12,7 @@ html, body {margin: 0; overflow-x: hidden}
 	-webkit-writing-mode: vertical-rl;
 	-ms-writing-mode: tb-rl;
 	writing-mode: vertical-rl;
+	width: 100%;
 }
 
 
@@ -63,7 +64,7 @@ body{
 }
 #top-nav.nav_hidden{
 	text-shadow: none;
-	top:-40px;
+	top:-3rem;
 }
 @media (max-width: 992px) {
 	#top-nav{
@@ -98,9 +99,12 @@ body{
 	color: #224252;
 	font-weight: 500;
 	letter-spacing: 0.1em;
-	margin: auto 2.6em;
+	margin: 0 2.6em;
 	line-height: 2em;
-	font-size: 1.2em
+	font-size: 1.2em;
+}
+.margin-for-tategaki{
+	margin-right:10em;
 }
 @media (max-width: 1200px) {
 	.background-main{
@@ -111,13 +115,16 @@ body{
 	}
 	.background-main h1{
 		letter-spacing: 3px;
-		margin:1em 0.5em;
-		font-size:2em;
+		margin:0.5em 0.5em;
+		font-size:3em;
 	}
 	.background-main h4{
 		margin: 2em 1em; 
 		font-size: 1.2em;
 		line-height: 1.7em;
+	}
+	.margin-for-tategaki{
+		margin-right:8em;
 	}
 }
 @media (max-width: 768px) {
@@ -135,6 +142,9 @@ body{
 		margin: 2em 1em; 
 		font-size: 1.3em;
 		line-height: 1.5em;
+	}
+	.margin-for-tategaki{
+		margin-right:2.5em;
 	}
 }
 
@@ -156,10 +166,16 @@ body{
 		font-size: 0.9em;
 		line-height: 1.2em;
 	}
+	.margin-for-tategaki{
+		margin-right:2em;
+	}
 }
 @media (max-width: 370px) {
 	.background-main h1{
 		margin-right: 0;
+	}
+	.margin-for-tategaki{
+		margin-right:1%;
 	}
 }
 
@@ -369,7 +385,7 @@ body{
     right: -9999px;
 }
 /* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+.flip-container.hover .flipper, .flip-container.flip .flipper {
 	transform: rotateX(180deg);
 }
 
