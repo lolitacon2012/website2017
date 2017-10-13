@@ -68,4 +68,5 @@
 
 .pace-loading-background.pace-done{
   opacity: 0;
+  display: none;
 }
