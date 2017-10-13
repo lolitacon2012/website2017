@@ -111,4 +111,6 @@ var sorry = function(){
   button: "I see...",
 });
 }
-sorry();
+Pace.on('done', function() {
+  $(".pace-loading-background").toggleClass("pace-done");
+});
