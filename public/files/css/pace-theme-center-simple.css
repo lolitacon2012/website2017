@@ -18,9 +18,7 @@
   width: 200px;
   background: #fff;
   border: 1px solid #E865A1;
-
   overflow: hidden;
-  transition: all 0.1s
 }
 
 .pace .pace-progress {
@@ -46,7 +44,6 @@
   height: 100%;
   width: 100%;
   background: #E865A1;
-  transition: all 0.1s
 }
 
 .pace.pace-inactive {
