@@ -47,7 +47,7 @@ var full_content = {
   en : {greeting:"Hello there.",
     intro:"<h4>I'm a software engineer from China, now working and living in Singapore.</h4><h4>I'm very interested in east Asian history, religions and classical literature. <br>I spend a lot of time visiting temples, shrines and museums during vacation.</h4><h4>As a linguaphile, I'm enthusiastic in language studies and linguistics.</h4><h4>And, I love reading books.</h4><h4>I wish you to have a good day.</h4>"
   },
-  en : {greeting:"Hello there.",
+  zh : {greeting:"Hello there.",
     intro:"<h4>I'm a software engineer from China, now working and living in Singapore.</h4><h4>I'm very interested in east Asian history, religions and classical literature. <br>I spend a lot of time visiting temples, shrines and museums during vacation.</h4><h4>As a linguaphile, I'm enthusiastic in language studies and linguistics.</h4><h4>And, I love reading books.</h4><h4>I wish you to have a good day.</h4>"
   }
 }
