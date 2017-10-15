@@ -82,13 +82,13 @@
 }
 
 .pace-loading-background-upper.pace-done-move-up{
-  top: -70%;
+  top: -90%;
   visibility: hidden;
-  transform: skewY(-10deg);
+  transform: skewY(20deg);
 }
 
 .pace-loading-background-bottom.pace-done-move-down{
   visibility: hidden;
-  bottom: -70%;
-  transform: skewY(-10deg);
+  bottom: -90%;
+  transform: skewY(20deg);
 }

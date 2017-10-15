@@ -1,47 +1,46 @@
-	<!DOCTYPE html>
-	<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="Personal Website Project 2017">
-		<meta name="author" content="Liu Dake dhyz@me.com">
+		<meta name="author" content="Kannagi Peekumii dhyz@me.com">
 		<script src="js/pace.min.js"></script>
-  		<link href="css/pace-theme-center-simple.css" rel="stylesheet" />
+		<link href="css/pace-theme-center-simple.css" rel="stylesheet" />
 		<link rel="icon" href="https://vignette.wikia.nocookie.net/survivor-org/images/3/34/L.jpg/revision/latest?cb=20130927203704">
-
-		<title>Liu Dake - WebSite</title>
-
+		<title>Kannagi Peekumii</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style_global.css">
 	</head>
-
 	<body>
-	<div class="pace-loading-background-upper"></div>
-	<div class="pace-loading-background-bottom"></div>
+		<div class="pace-loading-background-upper"></div>
+		<div class="pace-loading-background-bottom"></div>
 		<div id="app">
+
 			<nav id="top-nav" class="navbar navbar-expand-md navbar-dark fixed-top" v-bind:class="{ nav_pale_blue: isNotOnTop, nav_hidden: hideTopBarForMobile}">
 				<button class="navbar-toggler" id="navbar_collapse_button" type="button" data-toggle="collapse" data-target="#navbarsTop" aria-controls="navbarsTop" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
 				<div class="collapse navbar-collapse" id="navbarsTop">
-					<ul class="navbar-nav mr-auto">
+					<ul class="navbar-nav mr-auto" v-bind:class="{juliamo: language=='jul'}">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Home</a>
+							<a class="nav-link" href="#" >{{content.nav_bar_home}}</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="#">About</a>
+							<a class="nav-link" href="#" >{{content.nav_bar_blog}}</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link disabled" href="#">Blog</a>
+							<a class="nav-link disabled" href="#" >{{content.nav_bar_about}}</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link disabled" href="#">Gallery</a>
+							<a class="nav-link disabled" href="#" >{{content.nav_bar_gallery}}</a>
 						</li>
 					</ul>
-					<ul class="navbar-nav navbar-right"><li class="nav-item">
-						<a class="nav-link disabled" href="#"><hr></a>
-					</li></ul>
+					<ul class="navbar-nav navbar-right">
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#"><hr></a>
+						</li>
+					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="nav-item active" v-if="language!='jul'">
 							<a class="nav-link disabled juliamo" href="#" onclick="useLanguage('jul')">Juliamo</a>
@@ -52,6 +51,9 @@
 						<li class="nav-item active" v-if="language!='epo'">
 							<a class="nav-link disabled" href="#" onclick="useLanguage('epo')">Esperanto</a>
 						</li>
+						<li class="nav-item active" v-if="language!='zh'">
+							<a class="nav-link disabled" href="#" onclick="useLanguage('zh')">中文</a>
+						</li>
 						<li class="nav-item active" v-if="language!='en'">
 							<a class="nav-link disabled" href="#" onclick="useLanguage('en')">English</a>
 						</li>
@@ -61,17 +63,17 @@
 
 			<div class="jumbotron background-main" id="top-jumbotron" v-bind:class="{extend_for_tategaki: !useTategaki}">
 				<div class="container">
-				<transition name="fade" mode="out-in">
-					<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki, juliamo: language=='jul' }">
-						<h1 v-html="content.greeting" class="display-4 pink-first-character"></h1><br>
-						<div v-html="content.intro">
+					<transition name="fade" mode="out-in">
+						<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki, juliamo: language=='jul' }">
+							<h1 v-html="content.greeting" class="display-4 pink-first-character"></h1><br>
+							<div v-html="content.intro">
+							</div>
 						</div>
-					</div>
 					</transition>
 				</div>
 			</div>
-
-			<div class="container-fluid no-horizontal-padding-margin">
+			<transition name="fade" mode="out-in">
+			<div class="container-fluid no-horizontal-padding-margin" v-bind:key="language" v-bind:class="{juliamo: language=='jul'}">
 				<!-- Example row of columns -->
 				<div class="row card-row">
 					<div class="col-lg-3 col-md-6 index-card red-card">
@@ -90,7 +92,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="row"><div class="card-text"><h4>GitHub</h4></div></div>
+							<div class="row">
+								<div class="card-text">
+									<h4>GitHub</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 index-card purlpe-card">
@@ -100,21 +106,24 @@
 									<div class="flip-container" v-bind:class="{flip: steam_flip}">
 										<div class="flipper">
 											<div class="front">
-													<img :src="steam_front_img"/>
+												<img :src="steam_front_img"/>
 											</div>
 											<div class="back">
-													<img :src="steam_back_img"/>
+												<img :src="steam_back_img"/>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row"><div class="card-text">
-							<transition name="fade" mode="out-in">
-							<h4 v-bind:key="steam_message">
+							<div class="row">
+								<div class="card-text">
+									<transition name="fade" mode="out-in">
+										<h4 v-bind:key="steam_message">
 											{{steam_message}}
-										</h4></transition>
-										</div></div>
+										</h4>
+									</transition>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 index-card green-card">
@@ -133,7 +142,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="row"><div class="card-text"><h4>Duolingo</h4></div></div>
+							<div class="row">
+								<div class="card-text">
+									<h4>Duolingo</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 index-card blue-card">
@@ -164,39 +177,34 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="bottom-footer">
 					<div class="container">
 						<div class="row">
-							<h1 class="bottom-footer-greeting pink-first-character">綺麗なものを探しに行こう。</h1>
+							<h1 class="bottom-footer-greeting pink-first-character">{{content.search_bar_title}}</h1>
 						</div>
 						<div class="input-group" id="bottom_search_bar_container">
-						<input type="text" class="form-control" :placeholder="search_recommend_keyword" id="search-bar">
+							<input type="text" class="form-control" :placeholder="content.search_bar_recommend" id="search-bar">
 							<span class="input-group-btn">
 								<button class="btn btn-pink" type="button" onclick="sorry()">Go</button>
 							</span>
 						</div>
 						<div class="row">
-							<p class="bottom-footer-copyright">© 2017 Liu Dake</p>
+							<p class="bottom-footer-copyright">© 2017 Kannagi Peekumii</p>
 						</div>
 					</div>
 				</div>
-
-
 			</div> <!-- /container -->
+			</transition>
 		</div>
-
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/vue"></script>
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="js/text-data.js"></script>
 		<script src="js/index.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
-
-
 		<audio controls="controls" style="display: none;"></audio>
-
 	</body>
-	</html>
+</html>
