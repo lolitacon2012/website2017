@@ -14,7 +14,9 @@ html, body {margin: 0; overflow-x: hidden}
 	writing-mode: vertical-rl;
 	width: 100%;
 }
+.non_tategaki {
 
+}
 
 /*Colors and patterns*/
 .bg-pale-blue{
@@ -103,12 +105,11 @@ body{
 	line-height: 2em;
 	font-size: 1.2em;
 }
-.margin-for-tategaki{
+.margin_for_tategaki{
 	margin-right:10em;
 }
 @media (max-width: 1200px) {
 	.background-main{
-		/*padding-bottom:250px;*/
 		padding-left:5px;
 		padding-right:5px;
 		min-height: 800px;
@@ -123,7 +124,7 @@ body{
 		font-size: 1.2em;
 		line-height: 1.7em;
 	}
-	.margin-for-tategaki{
+	.margin_for_tategaki{
 		margin-right:8em;
 	}
 }
@@ -143,7 +144,7 @@ body{
 		font-size: 1.3em;
 		line-height: 1.5em;
 	}
-	.margin-for-tategaki{
+	.margin_for_tategaki{
 		margin-right:2.5em;
 	}
 }
@@ -166,7 +167,7 @@ body{
 		font-size: 0.9em;
 		line-height: 1.2em;
 	}
-	.margin-for-tategaki{
+	.margin_for_tategaki{
 		margin-right:2em;
 	}
 }
@@ -174,7 +175,7 @@ body{
 	.background-main h1{
 		margin-right: 0;
 	}
-	.margin-for-tategaki{
+	.margin_for_tategaki{
 		margin-right:1%;
 	}
 }
@@ -253,6 +254,7 @@ body{
 	text-shadow: 0px 2px 4px #434;
 	height: 21em;
 	overflow: hidden;
+	cursor: pointer;
 }
 .card-row{
 	margin: 0 auto;
@@ -443,7 +445,7 @@ body{
 
 /*fade animation for vue*/
 .fade-enter-active, .fade-leave-active, .can-be-invisible{
-	transition: opacity .1s
+	transition: opacity 1s
 }
 .fade-enter, .fade-leave-to, .invisible{
 	opacity: 0

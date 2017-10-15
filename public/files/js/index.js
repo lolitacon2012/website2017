@@ -34,10 +34,25 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 //=========================End of Section 1: device detection====================
 
 //=========================Section 2: vue app initialization====================
+//Article content in different languages
+var full_content = {
+  ja : {
+    greeting:"やっはろー",
+    intro:"<h4>中国人システムエンジニア、劉大可です。</h4><h4>大学卒業してから、<br>ずっとシンガポールで働いています。</h4><h4>歴史が好き、<br>古典が好き、<br>神仏にも興味があるので、<br>よく巡礼の旅に出ます。</h4><h4>語学が好き、<br>読書が好き、</h4><h4>今が一番大好きです。</h4>",
+
+  },
+  epo : {
+    greeting:"Bonvenon.",
+    intro:"<h4>Estas Esperanto.</h4><h4>Estas Esperanto, <br>sed estas ne facila.</h4>"
+  },
+  en : {},
+  zh : {}
+}
 //initialize app vue
 var app = new Vue({
   el: '#app',
   data: {
+    language: "ja",
   	isNotOnTop: false,
     hideTopBarForMobile: false,
     useTategaki: true,
@@ -61,7 +76,9 @@ var app = new Vue({
     steam_flip: function (){
       return (this.steam_state%2 == 1);
     },
-
+    content: function (){
+      return full_content[this.language];
+    }
   }
 })
 
@@ -160,6 +177,16 @@ var sorry = function(){
 }
 
 Pace.on('done', function() {
-  $(".pace-loading-background").toggleClass("pace-done");
+  $(".pace-loading-background-upper").toggleClass("pace-done-move-up");
+  $(".pace-loading-background-bottom").toggleClass("pace-done-move-down");
 });
+
+function useLanguage(lang){
+  if(lang == "ja" || lang == "zh"){
+    app.useTategaki = true;
+  }else{
+    app.useTategaki = false;
+  }
+  app.language = lang;
+}
 //=========================End of Section 5: utilities=================================
