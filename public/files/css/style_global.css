@@ -5,6 +5,10 @@ html, body {margin: 0; overflow-x: hidden}
 	font-family: juliamo;
 	src: url(../fonts/juliamo.woff);
 }
+@font-face{
+	font-family: Source Sans Pro Light;
+	src: url(../fonts/source-sans-pro.light.ttf);
+}
 .juliamo { 
 	font-family: juliamo;
 }
@@ -15,8 +19,13 @@ html, body {margin: 0; overflow-x: hidden}
 	width: 100%;
 }
 .non_tategaki {
-
+	font-family: Source Sans Pro Light;
 }
+
+.non_tategaki.juliamo {
+	font-family: juliamo;
+}
+
 
 /*Colors and patterns*/
 .bg-pale-blue{
@@ -90,6 +99,7 @@ body{
 	margin-bottom: -50px;
 	z-index: -2;
 }
+
 .background-main h1{
 	text-shadow: 0 2px 3px #fff, 2px 0 3px #fff, 0 -2px 3px #fff, -2px 0 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff, -2px 2px 3px #fff, 2px 2px 3px #fff;
 	color: #65a7ff;
@@ -99,7 +109,7 @@ body{
 }
 .background-main h4{
 	color: #224252;
-	font-weight: 500;
+	font-weight: 400;
 	letter-spacing: 0.1em;
 	margin: 0 2.6em;
 	line-height: 2em;
@@ -107,6 +117,20 @@ body{
 }
 .margin_for_tategaki{
 	margin-right:10em;
+}
+.background-main .non_tategaki h1{
+	font-weight: 400;
+	letter-spacing: 3px;
+	font-size: 4em;
+	text-align: center;
+}
+.background-main .non_tategaki h4{
+	letter-spacing: 0;
+	font-weight: 400;
+	margin: 1em auto;
+	text-align: center;
+	line-height: 1.5em;
+	font-size: 1.6em;
 }
 @media (max-width: 1200px) {
 	.background-main{
@@ -127,6 +151,14 @@ body{
 	.margin_for_tategaki{
 		margin-right:8em;
 	}
+	.background-main .non_tategaki h1{
+	margin:0;
+}
+.background-main .non_tategaki h4{
+	margin: 0.8em auto;
+	line-height: 1.4em;
+	font-size: 1.5em;
+}
 }
 @media (max-width: 768px) {
 	.background-main{
@@ -147,6 +179,14 @@ body{
 	.margin_for_tategaki{
 		margin-right:2.5em;
 	}
+		.background-main .non_tategaki h1{
+	margin:0;
+}
+.background-main .non_tategaki h4{
+	margin: 0.8em auto;
+	line-height: 1.4em;
+	font-size: 1.2em;
+}
 }
 
 @media (max-width: 576px) {
@@ -170,13 +210,28 @@ body{
 	.margin_for_tategaki{
 		margin-right:2em;
 	}
+	.extend_for_tategaki{
+		min-height: 57em;
+	}
+		.background-main .non_tategaki h1{
+	font-size: 3.5em;
+}
 }
 @media (max-width: 370px) {
+	.extend_for_tategaki{
+		min-height: 60em;
+	}
 	.background-main h1{
 		margin-right: 0;
 	}
 	.margin_for_tategaki{
 		margin-right:1%;
+	}
+	.background-main .non_tategaki h1{
+	font-size: 3em;
+}
+.extend_for_tategaki{
+		min-height: 60em;
 	}
 }
 
@@ -445,7 +500,7 @@ body{
 
 /*fade animation for vue*/
 .fade-enter-active, .fade-leave-active, .can-be-invisible{
-	transition: opacity 1s
+	transition: opacity .3s
 }
 .fade-enter, .fade-leave-to, .invisible{
 	opacity: 0

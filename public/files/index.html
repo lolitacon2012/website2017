@@ -43,29 +43,29 @@
 						<a class="nav-link disabled" href="#"><hr></a>
 					</li></ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li class="nav-item active">
-							<a class="nav-link disabled juliamo" href="#">Juliamo</a>
+						<li class="nav-item active" v-if="language!='jul'">
+							<a class="nav-link disabled juliamo" href="#" onclick="useLanguage('jul')">Juliamo</a>
 						</li>
-						<li class="nav-item active">
+						<li class="nav-item active" v-if="language!='ja'">
 							<a class="nav-link disabled" href="#" onclick="useLanguage('ja')">日本語</a>
 						</li>
-						<li class="nav-item active">
+						<li class="nav-item active" v-if="language!='epo'">
 							<a class="nav-link disabled" href="#" onclick="useLanguage('epo')">Esperanto</a>
 						</li>
-						<li class="nav-item active">
-							<a class="nav-link disabled" href="#">中文</a>
+						<li class="nav-item active" v-if="language!='zh'">
+							<a class="nav-link disabled" href="#" onclick="useLanguage('zh')">中文</a>
 						</li>
-						<li class="nav-item active">
-							<a class="nav-link disabled" href="#">English</a>
+						<li class="nav-item active" v-if="language!='en'">
+							<a class="nav-link disabled" href="#" onclick="useLanguage('en')">English</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
 
-			<div class="jumbotron background-main" id="top-jumbotron">
+			<div class="jumbotron background-main" id="top-jumbotron" v-bind:class="{extend_for_tategaki: !useTategaki}">
 				<div class="container">
 				<transition name="fade" mode="out-in">
-					<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki }">
+					<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki, juliamo: language=='jul' }">
 						<h1 v-html="content.greeting" class="display-4 pink-first-character"></h1><br>
 						<div v-html="content.intro">
 						</div>

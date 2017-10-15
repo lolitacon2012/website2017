@@ -39,23 +39,27 @@ var full_content = {
   ja : {
     greeting:"やっはろー",
     intro:"<h4>中国人システムエンジニア、劉大可です。</h4><h4>大学卒業してから、<br>ずっとシンガポールで働いています。</h4><h4>歴史が好き、<br>古典が好き、<br>神仏にも興味があるので、<br>よく巡礼の旅に出ます。</h4><h4>語学が好き、<br>読書が好き、</h4><h4>今が一番大好きです。</h4>",
-
   },
   epo : {
-    greeting:"Bonvenon.",
-    intro:"<h4>Estas Esperanto.</h4><h4>Estas Esperanto, <br>sed estas ne facila.</h4>"
+    greeting:"Bonvenon!",
+    intro:"<h4>Mi estas programaro inĝeniero el Ĉinio kaj mia nomo estas Liŭ Dake, <br>loĝas kaj laboras en Singapuro nun.</h4><h4>Dum la universitato mi studis computikan sciencon kaj Japana religio.</h4><h4>Mi tre ŝatas orientaj aziaj historioj kaj klasikaj literaturoj, <br>tial mi ofte trovas al temploj, sanktejoj kaj muzeoj.</h4><h4>Ankaŭ mi ŝatas studi lingvojn kaj legi librojn.</h4><h4>Mi esperas, ke vi havas bonan ĉiutagojn!</h4>"
   },
-  en : {},
-  zh : {}
+  en : {greeting:"Hello there.",
+    intro:"<h4>I'm a software engineer from China, now working and living in Singapore.</h4><h4>I'm very interested in east Asian history, religions and classical literature. <br>I spend a lot of time visiting temples, shrines and museums during vacation.</h4><h4>As a linguaphile, I'm enthusiastic in language studies and linguistics.</h4><h4>And, I love reading books.</h4><h4>I wish you to have a good day.</h4>"
+  },
+  en : {greeting:"Hello there.",
+    intro:"<h4>I'm a software engineer from China, now working and living in Singapore.</h4><h4>I'm very interested in east Asian history, religions and classical literature. <br>I spend a lot of time visiting temples, shrines and museums during vacation.</h4><h4>As a linguaphile, I'm enthusiastic in language studies and linguistics.</h4><h4>And, I love reading books.</h4><h4>I wish you to have a good day.</h4>"
+  }
 }
+full_content.jul = full_content.epo;
 //initialize app vue
 var app = new Vue({
   el: '#app',
   data: {
-    language: "ja",
+    language: "en",
   	isNotOnTop: false,
     hideTopBarForMobile: false,
-    useTategaki: true,
+    useTategaki: false,
     zhihu_state: 0,
     zhihu_message_list: ["知乎"],
     steam_state: 0,
