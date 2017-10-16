@@ -100,7 +100,7 @@ xhttp.onreadystatechange=function() {
     prepareZhihuMessage(this.responseText);
   }
 };
-xhttp.open("GET", "http://gakumusume.com/get-api/fetch_zhihu_state?t=" + Math.random(), true);
+xhttp.open("GET", "http://kannagi.moe/get-api/fetch_zhihu_state?t=" + Math.random(), true);
 xhttp.send();
 
 function prepareZhihuMessage(obj){
@@ -118,7 +118,7 @@ xhttp.onreadystatechange=function() {
     prepareSteamMessage(this.responseText);
   }
 };
-xhttp.open("GET", "http://gakumusume.com/get-api/fetch_steam_state?t=" + Math.random(), true);
+xhttp.open("GET", "http://kannagi.moe/get-api/fetch_steam_state?t=" + Math.random(), true);
 xhttp.send();
 
 function prepareSteamMessage(obj){
