@@ -159,6 +159,9 @@ body{
 		line-height: 1.4em;
 		font-size: 1.5em;
 	}
+	.extend_for_non_tategaki{
+		min-height: 920px;
+	}
 }
 @media (max-width: 768px) {
 	.background-main{
@@ -210,11 +213,11 @@ body{
 	.margin_for_tategaki{
 		margin-right:2em;
 	}
-	.extend_for_tategaki{
-		min-height: 63em;
-	}
 	.background-main .non_tategaki h1{
 		font-size: 3.5em;
+	}
+	.extend_for_non_tategaki{
+		min-height: 940px;
 	}
 }
 @media (max-width: 370px) {
@@ -226,6 +229,9 @@ body{
 	}
 	.background-main .non_tategaki h1{
 		font-size: 3em;
+	}
+	.extend_for_non_tategaki{
+		min-height: 1000px;
 	}
 }
 
@@ -368,7 +374,7 @@ body{
 	letter-spacing: 12px;
 	margin: 120px auto;
 	margin-bottom:20px;
-	font-weight: 300;
+	font-weight: lighter;
 	font-size:3.2em;
 }
 
@@ -380,8 +386,6 @@ body{
 	.bottom-footer-greeting{
 		letter-spacing: 10px;
 		margin: 80px auto;
-		margin-bottom:20px;
-		font-weight: 300;
 		font-size:2em;
 	}
 	.bottom-footer{

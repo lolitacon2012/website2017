@@ -61,7 +61,7 @@
 				</div>
 			</nav>
 
-			<div class="jumbotron background-main" id="top-jumbotron" v-bind:class="{extend_for_tategaki: !useTategaki}">
+			<div class="jumbotron background-main" id="top-jumbotron" v-bind:class="{extend_for_non_tategaki: !useTategaki}">
 				<div class="container">
 					<transition name="fade" mode="out-in">
 						<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki, juliamo: language=='jul' }">
@@ -189,7 +189,7 @@
 							</span>
 						</div>
 						<div class="row">
-							<p class="bottom-footer-copyright">© 2017 Kannagi Peekumii</p>
+							<p class="bottom-footer-copyright">© 2017 {{content.nickname}}</p>
 						</div>
 					</div>
 				</div>
