@@ -38,12 +38,12 @@
       }
     }
     a {
-      color: $green;
+      color: $blue;
       text-decoration: none;
-      border-bottom: 1px dashed $green;
+      border-bottom: 1px dashed $blue;
       &:hover {
-        color: $greenDark;
-        border-bottom: 1px dashed $greenDark;
+        color: $blueDark;
+        border-bottom: 1px dashed $blueDark;
       }
     }
     code {
@@ -53,7 +53,7 @@
       border-radius: 3px;
       margin: 0px 3px;
       background-color: $whiteLight;
-      color: $green;
+      color: $blue;
     }
     pre {
       margin: 0;
@@ -71,7 +71,7 @@
       }
     }
     blockquote {
-      border-left: 4px $green solid;
+      border-left: 4px $pink solid;
       padding: 0px 10px 0px 20px;
       margin: 25px 0;
       margin-left: -23px;

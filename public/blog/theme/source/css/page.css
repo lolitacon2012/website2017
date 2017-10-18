@@ -45,7 +45,7 @@
     .article-list {
       margin-top: 100px;
       .searched {
-        background-color: $green;
+        background-color: $pink;
         color: $whiteLighter;
       }
       .article {
