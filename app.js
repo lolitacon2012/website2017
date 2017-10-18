@@ -45,6 +45,8 @@ app.get('/hello', function (req, res) {
 
 app.use('/', express.static('public/files'));
 
+app.use('/blog', express.static('public/blog/public'));
+
 app.get('/get-api/fetch_zhihu_state',function(req,res){
 	zhihu.User.info("xue-niang").then(function(user){
 		console.log(user);
