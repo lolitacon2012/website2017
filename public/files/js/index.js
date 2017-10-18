@@ -39,7 +39,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 var app = new Vue({
   el: '#app',
   data: {
-    language: "jul",
+    language: "epo",
   	isNotOnTop: false,
     hideTopBarForMobile: false,
     useTategaki: false,
@@ -51,7 +51,9 @@ var app = new Vue({
     steam_online_state: -1,
     steam_front_img: "img/steam.jpg",
     steam_back_img: "img/cake.png",
-    search_recommend_keyword: "Search recommend"
+    search_recommend_keyword: "Search recommend",
+    isMenuOpened: false,
+    isMobile: isMobile
   },
   computed: {
     zhihu_message: function () {
@@ -80,9 +82,8 @@ var card_global_state = 0;
 //initialize scrolling events.
 $(window).scroll(function() {
   var st = $(window).scrollTop();
-  console.log($( "#navbar_collapse_button" ).hasClass( "collapsed" ));
   if (st > lastScrollTop){
-    app.hideTopBarForMobile = isMobile && app.isNotOnTop && (!$( "#navbarsTop" ).hasClass( "show" ));
+    app.hideTopBarForMobile = isMobile && app.isNotOnTop && ($( "#toggledMenu" ).hasClass( "collapsed_toggle_menu" ));
  } else {
    app.hideTopBarForMobile = false;
  }
@@ -175,13 +176,10 @@ function useLanguage(lang){
     app.useTategaki = false;
   }
   app.language = lang;
-  $('#navbarsTop').collapse("hide");
+  app.isMenuOpened = false;
 }
-$('a.nav-link').click(function(e)
+$('.prevent-default').click(function(e)
 {
-  console.log("hiiii");
-    // Special stuff to do when this link is clicked...
-
     // Cancel the default action
     e.preventDefault();
 });

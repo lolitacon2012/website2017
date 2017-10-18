@@ -55,7 +55,7 @@ body{
 
 /*special nav effects*/
 #top-nav{
-	font-size: 0.9em;
+	font-size: 1.1rem;
 	background:none;
 	text-shadow: 0px 0px 10px #000000;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -64,12 +64,107 @@ body{
 	transition: all 0.5s ease-in-out;
 	z-index: 9001;
 	padding:0 1rem;
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height:3rem;
 }
-#navbar_collapse_button{
+#toggledMenu{
+	left: 0;
+	width: 100%;
+	height: 14rem;
+	z-index: 8797;
+	position: fixed;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	background: #73AEFF;
+	padding-top:5rem;
+	display:none;
+	text-shadow: 0px 0px 10px #FFFFCC;
+}
+.top-toggled-menu{
+	top: 0;
+}
+.collapsed_toggle_menu{
+	top:-14rem;
+}
+
+.top-toggled-menu-item{
+	width: 25%;
+	overflow: hidden;
+	text-align: center;
+	padding: auto;
+	color:#FFF;
+}
+.top-toggled-menu-item.short{
+	height: 2.5rem;
+}
+.top-toggled-menu-item h3{
+	font-size: 1em;
+	line-height: 2.5rem;
+}
+.top-toggled-menu-item h2{
+	font-size: 1.4em;
+}
+.top-toggled-menu-item h1{
+	font-size: 1.8em;
+}
+
+.top-nav-left-head{
+	position: absolute;
+	left: 1em;
+	height: 3rem;
+	width: 3rem;
+	overflow: hidden;
+}
+.top-nav-left-head img{
+	padding:5px;
+	width: 100%;
+	border-radius: 100px;
+}
+.top-nav-left-name {
+	position: absolute;
+	left: 4em;
+	height: 3rem;
+	padding-top:0.7rem;
+}
+
+.top-nav-right{
+	position: absolute;
+	right: 3em;
+	padding: 0.7rem;
+}
+.top-nav-left-name, .top-nav-right a, .top-nav-language{
+	text-decoration: none;
 	color: #FFF;
-	border:none;
 }
-#top-nav.nav_pale_blue{
+.top-nav-right a{
+	margin:0 0.3em;
+}
+.top-nav-language{
+	position: absolute;
+	right: 0em;
+	padding-top: 0.7rem;
+}
+#top-nav .dropdown-menu{
+	background: rgba(166,200,222,0.98);
+	border: none;
+	color: #FFF;
+	font-size: 0.7em;
+	min-width: 5rem;
+}
+
+#top-nav .dropdown-item{
+	color: #FFF;
+}
+#top-nav .dropdown-item:hover{
+	background: rgba(186,220,232,0.98);
+}
+
+#top-nav.nav_pale_blue, #toggledMenu.nav_pale_blue{
 	background: rgba(166,200,222,0.98);
 	text-shadow: 0px 0px 10px #FFFFCC;
 }
@@ -77,10 +172,53 @@ body{
 	text-shadow: none;
 	top:-3rem;
 }
+#navbar_collapse_button{
+	position: absolute;
+	right: 1em;
+	top:0.3rem;
+	font-size:1.6rem;
+	height: 2rem;
+	width: 2rem;
+	overflow: hidden;
+	text-align: center;
+	color:#FFF;
+	display: none;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#navbar_collapse_button.navbar_collapse_button_toggled{
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top:0.4rem;
+}
+
+
 @media (max-width: 992px) {
 	#top-nav{
 		background: #73AEFF;
 		text-shadow: 0px 0px 10px #FFFFCC;
+	}
+	#toggledMenu{
+		display: flex;
+		z-index: 8797;
+		flex-direction: row;
+		flex-wrap: wrap-reverse;
+		justify-content: space-around;
+		align-content: space-between;
+	}
+	#toggledMenuButton{
+		display:block;
+	}
+	.topMenuButtons{
+		display:none;
+	}
+	#navbar_collapse_button{
+		display: block;
 	}
 }
 
@@ -93,9 +231,9 @@ body{
 	-o-background-size: cover;
 	background-size: cover;
 	height: 100vh;
-	min-height: 800px;
+	min-height: 950px;
 	background-position: center;
-	padding-top:90px;
+	padding-top:60px;
 	margin-bottom: -50px;
 	z-index: -2;
 }
@@ -276,6 +414,10 @@ body{
     rgba(255,255,255,.4) 50%, rgba(255,255,255,.4) 75%,
     rgba(255,192,203,.4) 75%, rgba(255,192,203,.4)
   );
+  	  	-webkit-transition: transform .3s ease-out;
+	-moz-transition: transform .3s ease-out;
+	-o-transition: transform .3s ease-out;
+	transition: transform .3s ease-out;
 }
 .index-card.red-card::after, .index-card.green-card::after{
 	transform: skewY(-5deg);
@@ -283,7 +425,8 @@ body{
 .index-card.blue-card::after, .index-card.purple-card::after{
 	transform: skewY(5deg);
 }
-.index-card:hover:before {
+
+.index-card:hover:before, .index-card:hover:after{
 	transform: skewY(0deg);
 }
 .red-card::before {
@@ -322,6 +465,7 @@ body{
 	height: 21em;
 	overflow: hidden;
 	cursor: pointer;
+	cursor: hand;
 }
 .card-row{
 	margin: 0 auto;

@@ -4,8 +4,8 @@ author: me
 
 ---
 
-## 纸小墨
+## 巫部親雲上
 
-构建只为纯粹书写的博客。
+Cry out and have a good day.
 
-[http://www.chole.io/](http://www.chole.io/)
+[https://kannagi.moe/](https://kannagi.moe/)

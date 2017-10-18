@@ -14,7 +14,7 @@ var full_content = {
   epo : {
     nickname:"Kannagi Peekumij",
     greeting:"Bonvenon.",
-    intro:"<h4>Mi estas programaro inĝeniero el Ĉinio kaj mia nomo estas Kannagi Peekumii, <br>nun laboras en Singapuro.</h4><h4>Dum la universitato mi studis computikan sciencon kaj Japana religio.</h4><h4>Mi tre ŝatas orientaj aziaj historioj kaj klasikaj literaturoj, <br>tial mi ofte trovas al temploj, sanktejoj kaj muzeoj.</h4><h4>Ankaŭ mi ŝatas studi lingvojn kaj legi librojn.</h4><h4>Mi esperas, ke vi havas bonan ĉiutagojn!</h4>",
+    intro:"<h4>Mi estas programaro inĝeniero el Ĉinio kaj mia nomo estas Kannagi Peekumij, <br>nun laboras en Singapuro.</h4><h4>Dum la universitato mi studis computikan sciencon kaj Japana religio.</h4><h4>Mi tre ŝatas orientaj aziaj historioj kaj klasikaj literaturoj, <br>tial mi ofte trovas al temploj, sanktejoj kaj muzeoj.</h4><h4>Ankaŭ mi ŝatas studi lingvojn kaj legi librojn.</h4><h4>Mi esperas, ke vi havas bonan ĉiutagojn!</h4>",
     search_bar_title:"Iru serĉi ion belan!",
     search_bar_recommend:"(Ne estas rekomendindaj)",
     nav_bar_home:"Hejmo",
@@ -34,7 +34,7 @@ var full_content = {
     nav_bar_gallery:"Gallery"
   },
   zh : {
-    nickname:"Kannagi Pēkumī",
+    nickname:"巫部親雲上",
     greeting:"巫部親雲上",
     intro:"<h4>来自華北的普通程序員，現居星洲。</h4><h4>喜歓東亞宗教、歴史和古典文学，<br>常出入扶桑各地神社寺庙以及考古博物館，<br>樂此不疲。</h4><h4>粗通洋文，對語言学有所涉獵，<br>但除英日二語之外尚不足以流暢交談。</h4><h4>好讀書不求甚解，<br>關注技術而欠缺實践。</h4><h4>對世界充滿好奇，<br>姑且算是個熱愛生活的人吧。</h4>",
     search_bar_title:"在找点什么呢？",
@@ -42,7 +42,7 @@ var full_content = {
     nav_bar_home:"首頁",
     nav_bar_blog:"文章",
     nav_bar_about:"关于",
-    nav_bar_gallery:"照片"
+    nav_bar_gallery:"相册"
   }
 };
 full_content.jul = full_content.epo;
