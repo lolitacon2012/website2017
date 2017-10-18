@@ -260,16 +260,28 @@ body{
 	-o-transition: transform .3s ease-out;
 	transition: transform .3s ease-out;
 }
-.index-card::after {
+.index-card::after{
 	content: "";
-	top:0px;
-	height:100%;
+	bottom:-20px;
+	height:100px;
 	width: 100%;
 	position: absolute;
 	display: block;
 	z-index: -3000;
-	transform: skewY(-10deg);
-	background: linear-gradient(45deg,#dc416b,#e865a1);
+  	background-size: 23px 23px;
+  	  background-image: linear-gradient(
+    -45deg,
+    rgba(255,255,255,.4) 25%,
+    rgba(255,192,203,.4) 25%, rgba(255,192,203,.4) 50%,
+    rgba(255,255,255,.4) 50%, rgba(255,255,255,.4) 75%,
+    rgba(255,192,203,.4) 75%, rgba(255,192,203,.4)
+  );
+}
+.index-card.red-card::after, .index-card.green-card::after{
+	transform: skewY(-5deg);
+}
+.index-card.blue-card::after, .index-card.purple-card::after{
+	transform: skewY(5deg);
 }
 .index-card:hover:before {
 	transform: skewY(0deg);
@@ -278,7 +290,7 @@ body{
 	transform: skewY(-5deg);
 	background: linear-gradient(45deg,#D595BD,#E5B3B3);
 }
-.purlpe-card::before{
+.purple-card::before{
 	transform: skewY(5deg);
 	background: linear-gradient(45deg,#C5B8D4,#BCBADE);
 }
@@ -293,7 +305,7 @@ body{
 .red-card{
 	margin-top:15px;
 }
-.purlpe-card{
+.purple-card{
 	margin-top:0px;
 }
 .green-card{
