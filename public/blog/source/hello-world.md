@@ -1,13 +1,12 @@
-title: "Hello World"
-date: 2017-10-19 03:10:10 +0800
-update: 2017-10-19 03:10:15 +0800
+title: "简洁的静态博客构建工具 —— 纸小墨（InkPaper）"
+date: 2015-03-01 18:00:00 +0800
+update: 2016-07-11 17:00:00 +0800
 author: me
-cover: "-/images/hello-world.png"
+cover: "-/images/example.png"
 tags:
-    - 无聊
-    - 中文
-preview: 
-这是一篇测试静态Blog的文章。
+    - 设计
+    - 写作
+preview: 纸小墨（InkPaper）是一个GO语言编写的开源静态博客构建工具，可以快速搭建博客网站。它无依赖跨平台，配置简单构建快速，注重简洁易用与更优雅的排版。
 
 ---
 
