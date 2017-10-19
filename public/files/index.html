@@ -20,10 +20,10 @@
 		<div id="app">
 			<header>
 				<div id="top-nav" v-bind:class="{ nav_pale_blue: isNotOnTop, nav_hidden: hideTopBarForMobile }">
-					<div class="top-nav-left-head">
+					<div class="top-nav-left-head" onclick="window.loation.href = 'https://kannagi.moe/'">
 						<img src="img/zhihu_avatar.jpg"/>
 					</div>
-					<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}">
+					<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}" onclick="window.loation.href = 'https://kannagi.moe/'">
 						{{content.nickname}}
 					</div>
 					<div class="topMenuButtons">

@@ -119,6 +119,8 @@ body{
 	height: 3rem;
 	width: 3rem;
 	overflow: hidden;
+	cursor: pointer;
+	cursor: hand;
 }
 .top-nav-left-head img{
 	padding:5px;
@@ -131,9 +133,13 @@ body{
 	left: 4em;
 	height: 3rem;
 	padding-top:0.7rem;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .top-nav-right{
+	cursor: pointer;
+	cursor: hand;
 	position: absolute;
 	right: 3em;
 	padding: 0.7rem;
