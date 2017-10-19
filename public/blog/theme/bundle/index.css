@@ -792,6 +792,7 @@ a.name {
 }
 .top-toggled-menu-item h2{
 	font-size: 1.1em;
+    margin-top: 0;
 }
 .top-toggled-menu-item h1{
 	font-size: 1.7em;
