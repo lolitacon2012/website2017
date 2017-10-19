@@ -757,7 +757,6 @@ a.name {
 #toggledMenu{
 	left: 0;
 	width: 100%;
-	height: 14rem;
 	z-index: 8797;
 	position: fixed;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -765,7 +764,7 @@ a.name {
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 	background: #73AEFF;
-	padding-top:5rem;
+	padding-top:3rem;
 	display:none;
 	text-shadow: 0px 0px 10px #FFFFCC;
 }
@@ -849,9 +848,9 @@ a.name {
 	background: rgba(186,220,232,0.98);
 }
 #navbar_collapse_button{
-	position: absolute;
-	right: 1em;
-	top:0.3rem;
+	position: fixed;
+	right: 1rem;
+	top:0.5rem;
 	font-size:1.6rem;
 	height: 2rem;
 	width: 2rem;
