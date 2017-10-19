@@ -6,12 +6,12 @@ copy:
 # I18n Support
 lang:
     archive:
-        en: ARCHIVE
+        en: Archive
         zh: 归档
         ru: Архив
         ja: アーカイブ
     tag:
-        en: TAG
+        en: Tag
         zh: 标签
         ru: Теги
         ja: タグ
