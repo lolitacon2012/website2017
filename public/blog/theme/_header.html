@@ -1,11 +1,27 @@
-<header class="header-wrap">
-  <a class="index" href="{{.Site.Root}}/">
-    {{if .Site.Logo}}<img class="logo" src="{{.Site.Logo}}" />{{end}}
-    {{.Site.Title}}
-  </a>
-  <ul class="menu">
-      <li class="menu-item"><a href="{{.Site.Root}}/archive.html">{{i18n "archive"}}</a></li>
-      <li class="menu-item"><a href="{{.Site.Root}}/tag.html">{{i18n "tag"}}</a></li>
-      {{if .Site.Url}}<li class="menu-item"><a href="{{.Site.Root}}/atom.xml">{{i18n "rss"}}</a></li>{{end}}
-  </ul>
-</header>
+<header>
+				<div id="top-nav" v-bind:class="{ nav_pale_blue: isNotOnTop, nav_hidden: hideTopBarForMobile }">
+					<div class="top-nav-left-head">
+						<img src="{{.Site.Logo}}"/>
+					</div>
+					<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}">
+						{{.Site.Title}}
+					</div>
+					<div class="topMenuButtons">
+					<div class="top-nav-right" v-bind:class="{juliamo: language=='jul'}">
+						<a href="#" class="prevent-default" onclick="window.open('{{.Site.Root}}/archive.html');">{{i18n "archive"}}</a>
+						<a href="#" class="prevent-default" onclick="window.open('{{.Site.Root}}/tag.html');">{{i18n "tag"}}</a>
+						<a href="#" class="prevent-default" onclick="sorry()">Gallery</a>
+						<a href="#" class="prevent-default" onclick="sorry()">About</a>
+					</div>
+					</div>
+					
+					<div id="navbar_collapse_button" v-on:click="isMenuOpened = !isMenuOpened" v-bind:class="{navbar_collapse_button_toggled: isMenuOpened }">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div id="toggledMenu" class="top-toggled-menu" v-bind:class="{ nav_pale_blue: isNotOnTop, collapsed_toggle_menu: !isMenuOpened }">
+					<div class="top-toggled-menu-item" onclick="window.open('https://kannagi.moe/blog/');"><h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1><h2>{{i18n "archive"}}</h2></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.open('{{.Site.Root}}/tag.html');"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{i18n "tag"}}</h2></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-camera-retro" aria-hidden="true"></i></h1><h2>{{content.nav_bar_gallery}}</h2></div>
+				</div>
+			</header>
