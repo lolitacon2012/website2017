@@ -6,8 +6,7 @@ cover: "-/images/hello-world.png"
 tags:
     - 技术
     - 杂记
-preview: 
-一年一度的重做网站，这次尝试用了一些新玩意，感觉还蛮不错。
+preview: 一年一度的重做网站，这次尝试用了一些新玩意，感觉还蛮不错。
 
 ---
 
