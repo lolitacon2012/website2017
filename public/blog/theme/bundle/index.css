@@ -815,13 +815,13 @@ a.name {
 	position: absolute;
 	left: 4em;
 	height: 3rem;
-	padding-top:0.7rem;
+	padding-top:0.8rem;
 }
 
 .top-nav-right{
 	position: absolute;
 	right: 3em;
-	padding: 0.7rem;
+	padding: 0.8rem;
 }
 .top-nav-left-name, .top-nav-right a, .top-nav-language{
 	text-decoration: none;
@@ -833,7 +833,7 @@ a.name {
 .top-nav-language{
 	position: absolute;
 	right: 0em;
-	padding-top: 0.7rem;
+	padding-top: 0.8rem;
 }
 #top-nav .dropdown-menu{
 	background: rgba(166,200,222,0.98);
@@ -896,16 +896,4 @@ a.name {
 	#navbar_collapse_button{
 		display: block;
 	}
-}
-.top-nav-right{
-	position: absolute;
-	right: 3em;
-	padding: 0.7rem;
-}
-.top-nav-left-name, .top-nav-right a, .top-nav-language{
-	text-decoration: none;
-	color: #FFF;
-}
-.top-nav-right a{
-	margin:0 0.3em;
 }
