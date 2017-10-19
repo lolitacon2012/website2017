@@ -790,10 +790,12 @@ a.name {
 	line-height: 2.5rem;
 }
 .top-toggled-menu-item h2{
-	font-size: 1.4em;
+	font-size: 1.1em;
 }
 .top-toggled-menu-item h1{
-	font-size: 1.8em;
+	font-size: 1.7em;
+    margin-bottom: 0;
+    margin-top: 0.6em;
 }
 
 .top-nav-left-head{
