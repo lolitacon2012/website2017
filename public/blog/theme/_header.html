@@ -3,11 +3,11 @@
 					<div class="top-nav-left-head">
 						<img src="{{.Site.Logo}}"/>
 					</div>
-					<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}">
+					<div class="top-nav-left-name">
 						{{.Site.Title}}
 					</div>
 					<div class="topMenuButtons">
-					<div class="top-nav-right" v-bind:class="{juliamo: language=='jul'}">
+					<div class="top-nav-right">
 						<a href="#" class="prevent-default" onclick="window.open('{{.Site.Root}}/archive.html');">{{i18n "archive"}}</a>
 						<a href="#" class="prevent-default" onclick="window.open('{{.Site.Root}}/tag.html');">{{i18n "tag"}}</a>
 						<a href="#" class="prevent-default" onclick="sorry()">Gallery</a>
@@ -21,7 +21,7 @@
 				</div>
 				<div id="toggledMenu" class="top-toggled-menu" v-bind:class="{ nav_pale_blue: isNotOnTop, collapsed_toggle_menu: !isMenuOpened }">
 					<div class="top-toggled-menu-item" onclick="window.open('https://kannagi.moe/blog/');"><h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1><h2>{{i18n "archive"}}</h2></div>
-					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.open('{{.Site.Root}}/tag.html');"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{i18n "tag"}}</h2></div>
-					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-camera-retro" aria-hidden="true"></i></h1><h2>Gallery</h2></div>
+					<div class="top-toggled-menu-item" onclick="window.open('{{.Site.Root}}/tag.html');"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{i18n "tag"}}</h2></div>
+					<div class="top-toggled-menu-item" onclick="sorry()"><h1><i class="fa fa-camera-retro" aria-hidden="true"></i></h1><h2>Gallery</h2></div>
 				</div>
 			</header>

@@ -124,6 +124,7 @@ body{
 	padding:5px;
 	width: 100%;
 	border-radius: 100px;
+	box-sizing: border-box;
 }
 .top-nav-left-name {
 	position: absolute;

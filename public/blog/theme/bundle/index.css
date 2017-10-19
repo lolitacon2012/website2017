@@ -806,8 +806,9 @@ a.name {
 }
 .top-nav-left-head img{
 	padding:5px;
-	width: 100%;
+	height: 100%;
 	border-radius: 100px;
+    box-sizing: border-box;
 }
 .top-nav-left-name {
 	position: absolute;
