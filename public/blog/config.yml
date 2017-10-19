@@ -1,9 +1,9 @@
 site:
-    title: "巫部親雲上的博客"
-    subtitle: "网站建设中"
-    limit: 16
+    title: "Kannagi Peekumii's Blog"
+    subtitle: "关注计算机技术、自然语言、东亚文化以及各种有趣的事物"
+    limit: 10
     theme: theme
-    lang: zh
+    lang: en
     url: "https://kannagi.moe/blog"
     comment: kannagi-moe
     logo: "-/images/zhihu_avatar.jpg"
@@ -13,7 +13,7 @@ site:
 authors:
     me:
         name: "巫部親雲上"
-        intro: "有理想、有道德、有文化、有纪律"
+        intro: "In solitude, where we are least alone."
         avatar: "-/images/zhihu_avatar.jpg"
 
 build:

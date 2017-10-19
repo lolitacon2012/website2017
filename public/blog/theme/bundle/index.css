@@ -848,8 +848,8 @@ a.name {
 	background: rgba(186,220,232,0.98);
 }
 #navbar_collapse_button{
-	position: fixed;
-	right: 1rem;
+	position: absolute;
+	right: 3rem;
 	top:0.5rem;
 	font-size:1.6rem;
 	height: 2rem;
