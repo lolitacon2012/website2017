@@ -7,6 +7,7 @@
         <title>{{.Site.Title}}</title>
     </head>
     <body>
+    	<div id="app">
         <article class="container">
             {{template "header" .}}
             <article class="main tag">
@@ -28,6 +29,7 @@
             </article>
         </article>
         {{template "footer" .}}
+    </div>
     </body>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue"></script>
