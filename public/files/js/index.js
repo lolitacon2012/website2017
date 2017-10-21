@@ -53,7 +53,7 @@ Vue.component('gallery-card', {
             </div>`,
   data: function() {
         return {
-            photo_path: "img/gallery/"+this.photo_year+"."+this.photo_month+"."+this.photo_location+".0.jpg"
+            photo_path: "img/gallery/"+this.photo_year+"/"+this.photo_month+"/"+this.photo_location+"/0.jpg"
         };
     }
 });
@@ -75,7 +75,8 @@ var app = new Vue({
     steam_back_img: "img/cake.png",
     search_recommend_keyword: "Search recommend",
     isMenuOpened: false,
-    isMobile: isMobile
+    isMobile: isMobile,
+    gallery_years: gallery_data.data
   },
   computed: {
     zhihu_message: function () {
@@ -89,6 +90,18 @@ var app = new Vue({
     },
     content: function (){
       return full_content[this.language];
+    }
+  },
+  methods: {
+    getMonthInCurrentLanguage:function(month){
+      return this.content.months[month-1];
+    },
+    getLocationInCurrentLanguage:function(location_name){
+      if(this.content.locations[location_name]!==undefined){
+        return this.content.locations[location_name];
+      }else{
+        return location_name;
+      }
     }
   }
 })

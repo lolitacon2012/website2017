@@ -96,10 +96,10 @@
 					</a>
 				</div>
 			</div>
-			<div class="gallery_year_row">
-				<h1 class="gallery_year_title">2017</h1>
+			<div class="gallery_year_row" v-for="gallery_current_year in gallery_years">
+				<h1 class="gallery_year_title">{{gallery_current_year.year}}</h1>
 				<div class="gallery_location_card_container">
-					<gallery-card photo_year="2017" photo_month="9" photo_month_in_current_language="September" photo_location="izumo" photo_location_in_current_language="Izumo" photo_description="Photos of Izumo Oyashiro."></gallery-card>
+					<gallery-card v-for="gallery_card in gallery_current_year.cards" :key="gallery_card.id" :photo_year="gallery_current_year.year" :photo_month="gallery_card.month" :photo_month_in_current_language="getMonthInCurrentLanguage(gallery_card.month)" :photo_location="gallery_card.location" :photo_location_in_current_language="getLocationInCurrentLanguage(gallery_card.location)" :photo_description="gallery_card.desc"></gallery-card>
 				</div>
 			</div>
 		</div>
@@ -109,6 +109,7 @@
 		<script src="https://unpkg.com/vue"></script>
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="js/text-data.js"></script>
+		<script src="js/gallery-data.js"></script>
 		<script src="js/index.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->

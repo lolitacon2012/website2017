@@ -9,7 +9,13 @@ var full_content = {
     nav_bar_home:"ホーム",
     nav_bar_blog:"ブログ",
     nav_bar_about:"私について",
-    nav_bar_gallery:"ギャラリー"
+    nav_bar_gallery:"ギャラリー",
+    months:["孟春", "華朝", "弥生", "孟夏", "皐月", "水無月", "孟秋", "葉月", "季白", "神無月", "神楽月", "師走"],
+    locations:{
+        izumo:"出雲",
+        kyoto:"京都",
+        tokyo:"東京"
+    }
   },
   epo : {
     nickname:"Kannagi Peekumij",
@@ -20,7 +26,13 @@ var full_content = {
     nav_bar_home:"Hejmo",
     nav_bar_blog:"Blogo",
     nav_bar_about:"Pri mi",
-    nav_bar_gallery:"Galerio"
+    nav_bar_gallery:"Galerio",
+    months:["Januaro", "Februaro", "Marto", "Aprilo", "Majo", "Junio", "Julio", "Aŭgusto", "Septembro", "Oktobro", "Novembro", "Decembro"],
+    locations:{
+        izumo:"Izumo",
+        kyoto:"Kyoto",
+        tokyo:"Tokyo"
+    }
   },
   en : {
     nickname:"Kannagi Peekumii",
@@ -31,7 +43,13 @@ var full_content = {
     nav_bar_home:"Home",
     nav_bar_blog:"Blog",
     nav_bar_about:"About",
-    nav_bar_gallery:"Gallery"
+    nav_bar_gallery:"Gallery",
+    months:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        locations:{
+        izumo:"Izumo",
+        kyoto:"Kyoto",
+        tokyo:"Tokyo"
+    }
   },
   zh : {
     nickname:"巫部親雲上",
@@ -42,7 +60,13 @@ var full_content = {
     nav_bar_home:"首頁",
     nav_bar_blog:"文章",
     nav_bar_about:"关于",
-    nav_bar_gallery:"相册"
+    nav_bar_gallery:"相册",
+    months:["正月", "如月", "季月", "麦月", "皋月", "荷月", "蘭月", "桂月", "菊月", "露月", "葭月", "腊月"],
+    locations:{
+        izumo:"出雲",
+        kyoto:"京都",
+        tokyo:"東京"
+    }
   }
 };
 full_content.jul = full_content.epo;
