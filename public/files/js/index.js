@@ -35,6 +35,28 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 
 //=========================Section 2: vue app initialization====================
 //text contents are loaded in text-data.js
+
+//Register vue component
+/*gallery image path&name: img/gallery/{{year}}.{{month}}.{{location}}.{{order}}.jpg
+  cover image uses image.order == 0
+*/
+Vue.component('gallery-card', {
+  props: ['photo_year','photo_month','photo_month_in_current_language','photo_location','photo_location_in_current_language','photo_description'],
+  template: `<div class="gallery_location_card">
+               <div class="gallery_location_card_img_container">
+               <img :src=photo_path />
+             </div>
+             <div class="gallery_location_card_text_container">
+               <p><span>{{ photo_month_in_current_language }}</span>, <span class="gallery_location_card_place">{{ photo_location_in_current_language }}</span></p> \
+               <h5>{{ photo_description }}</h5>
+             </div> 
+            </div>`,
+  data: function() {
+        return {
+            photo_path: "img/gallery/"+this.photo_year+"."+this.photo_month+"."+this.photo_location+".0.jpg"
+        };
+    }
+});
 //initialize app vue
 var app = new Vue({
   el: '#app',
