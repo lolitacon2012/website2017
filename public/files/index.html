@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Personal Website Project 2017">
-	<meta name="author" content="Kannagi Peekumii dhyz@me.com">
-	<script src="js/pace.min.js"></script>
-	<link href="css/pace-theme-center-simple.css" rel="stylesheet" />
-	<link rel="icon" href="https://vignette.wikia.nocookie.net/survivor-org/images/3/34/L.jpg/revision/latest?cb=20130927203704">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Personal Website Project 2017">
+		<meta name="author" content="Kannagi Peekumii dhyz@me.com">
+		<script src="js/pace.min.js"></script>
+		<link href="css/pace-theme-center-simple.css" rel="stylesheet" />
+		<link rel="icon" href="https://vignette.wikia.nocookie.net/survivor-org/images/3/34/L.jpg/revision/latest?cb=20130927203704">
 
-	<title>Kannagi Peekumii</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/font-awesome.min.css" >
-	<link rel="stylesheet" href="css/style_global.css" >
-</head>
-<body>
-	<div class="pace-loading-background-upper"></div>
-	<div id="app">
-		<header>
-			<div id="top-nav" v-bind:class="{ nav_pale_blue: isNotOnTop, nav_hidden: hideTopBarForMobile }">
-				<div class="top-nav-left-head" onclick="window.location.href = 'https://kannagi.moe/'">
-					<img src="img/zhihu_avatar.jpg"/>
-				</div>
-				<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}" onclick="window.location.href = 'https://kannagi.moe/'">
-					{{content.nickname}}
-				</div>
-				<div class="topMenuButtons">
+		<title>Kannagi Peekumii</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/font-awesome.min.css" >
+		<link rel="stylesheet" href="css/style_global.css" >
+	</head>
+	<body>
+		<div class="pace-loading-background-upper"></div>
+		<div class="pace-loading-background-bottom"></div>
+		<div id="app">
+			<header>
+				<div id="top-nav" v-bind:class="{ nav_pale_blue: isNotOnTop, nav_hidden: hideTopBarForMobile }">
+					<div class="top-nav-left-head" onclick="window.loation.href = 'https://kannagi.moe/'">
+						<img src="img/zhihu_avatar.jpg"/>
+					</div>
+					<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}" onclick="window.loation.href = 'https://kannagi.moe/'">
+						{{content.nickname}}
+					</div>
+					<div class="topMenuButtons">
 					<div class="top-nav-right" v-bind:class="{juliamo: language=='jul'}">
-						<a href="#" class="prevent-default" onclick="window.location.href = 'https://kannagi.moe/blog/'">{{content.nav_bar_blog}}</a>
+						<a href="#" class="prevent-default" onclick="window.open('https://kannagi.moe/blog/');">{{content.nav_bar_blog}}</a>
 						<a href="#" class="prevent-default" onclick="sorry()">{{content.nav_bar_about}}</a>
 						<a href="#" class="prevent-default" onclick="sorry()">{{content.nav_bar_gallery}}</a>
 					</div>
-					<div class="dropdown">
-						<div class="dropdown-toggle top-nav-language" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fa fa-language" aria-hidden="true"></i>
-						</div>
-						<div class="dropdown-menu prevent-default" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item prevent-default" href="#" onclick="useLanguage('zh')" v-if="language!='zh'">中文</a>
-							<a class="dropdown-item prevent-default" href="#" onclick="useLanguage('epo')" v-if="language!='epo'">Esperanto</a>
-							<a class="dropdown-item prevent-default" href="#" onclick="useLanguage('ja')" v-if="language!='ja'">日本語</a>
-							<a class="dropdown-item prevent-default juliamo" href="#" onclick="useLanguage('jul')" v-if="language!='jul'">Juliamo</a>
-							<a class="dropdown-item prevent-default" href="#" onclick="useLanguage('en')" v-if="language!='en'">English</a>
-						</div>
+					<div class="dropdown" style="cursor: pointer;cursor: hand;">
+  <div class="dropdown-toggle top-nav-language" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fa fa-language" aria-hidden="true"></i>
+  </div>
+  <div class="dropdown-menu prevent-default" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item prevent-default" href="#" onclick="useLanguage('zh')" v-if="language!='zh'">中文</a>
+    <a class="dropdown-item prevent-default" href="#" onclick="useLanguage('epo')" v-if="language!='epo'">Esperanto</a>
+    <a class="dropdown-item prevent-default" href="#" onclick="useLanguage('ja')" v-if="language!='ja'">日本語</a>
+    <a class="dropdown-item prevent-default juliamo" href="#" onclick="useLanguage('jul')" v-if="language!='jul'">Juliamo</a>
+    <a class="dropdown-item prevent-default" href="#" onclick="useLanguage('en')" v-if="language!='en'">English</a>
+  </div>
+</div></div>
+					
+					<div id="navbar_collapse_button" v-on:click="isMenuOpened = !isMenuOpened" v-bind:class="{navbar_collapse_button_toggled: isMenuOpened }">
+						<i class="fa fa-bars" aria-hidden="true"></i>
 					</div>
 				</div>
+				<div id="toggledMenu" class="top-toggled-menu" v-bind:class="{ nav_pale_blue: isNotOnTop, collapsed_toggle_menu: !isMenuOpened }">
+					<div class="top-toggled-menu-item short" style="background:rgba(66,66,0,.1)" onclick="useLanguage('zh')" v-if="language!='zh'"><h3>中文</h3></div>
+					<div class="top-toggled-menu-item short" style="background:rgba(66,33,33,.2)" onclick="useLanguage('epo')" v-if="language!='epo'"><h3>Esperanto</h3></div>
+					<div class="top-toggled-menu-item short" style="background:rgba(0,66,66,.1)" onclick="useLanguage('ja')" v-if="language!='ja'"><h3>日本語</h3></div>
+					<div class="top-toggled-menu-item short juliamo" style="background:rgba(33,66,33,.3)" onclick="useLanguage('jul')" v-if="language!='jul'"><h3>Juliamo</h3></div>
+					<div class="top-toggled-menu-item short" style="background:rgba(66,0,66,.2)" onclick="useLanguage('en')" v-if="language!='en'"><h3>English</h3></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.open('https://kannagi.moe/blog/');"><h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_blog}}</h2></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-camera-retro" aria-hidden="true"></i></h1><h2>{{content.nav_bar_gallery}}</h2></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_about}}</h2></div>
+				</div>
+			</header>
 
-				<div id="navbar_collapse_button" v-on:click="isMenuOpened = !isMenuOpened" v-bind:class="{navbar_collapse_button_toggled: isMenuOpened }">
-					<i class="fa fa-bars" aria-hidden="true"></i>
+			<div class="jumbotron background-main" id="top-jumbotron" v-bind:class="{extend_for_non_tategaki: !useTategaki}">
+				<div class="container">
+					<transition name="fade" mode="out-in">
+						<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki, juliamo: language=='jul' }">
+							<h1 v-html="content.greeting" class="display-4 pink-first-character"></h1><br>
+							<div v-html="content.intro">
+							</div>
+						</div>
+					</transition>
 				</div>
 			</div>
-			<div id="toggledMenu" class="top-toggled-menu" v-bind:class="{ nav_pale_blue: isNotOnTop, collapsed_toggle_menu: !isMenuOpened }">
-				<div class="top-toggled-menu-item short" style="background:rgba(66,66,0,.1)" onclick="useLanguage('zh')" v-if="language!='zh'"><h3>中文</h3></div>
-				<div class="top-toggled-menu-item short" style="background:rgba(66,33,33,.2)" onclick="useLanguage('epo')" v-if="language!='epo'"><h3>Esperanto</h3></div>
-				<div class="top-toggled-menu-item short" style="background:rgba(0,66,66,.1)" onclick="useLanguage('ja')" v-if="language!='ja'"><h3>日本語</h3></div>
-				<div class="top-toggled-menu-item short juliamo" style="background:rgba(33,66,33,.3)" onclick="useLanguage('jul')" v-if="language!='jul'"><h3>Juliamo</h3></div>
-				<div class="top-toggled-menu-item short" style="background:rgba(66,0,66,.2)" onclick="useLanguage('en')" v-if="language!='en'"><h3>English</h3></div>
-				<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.location.href = 'https://kannagi.moe/blog/'"><h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_blog}}</h2></div>
-				<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-camera-retro" aria-hidden="true"></i></h1><h2>{{content.nav_bar_gallery}}</h2></div>
-				<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_about}}</h2></div>
-			</div>
-		</header>
-
-		<div class="jumbotron background-main" id="top-jumbotron" v-bind:class="{extend_for_non_tategaki: !useTategaki}">
-			<div class="container">
-				<transition name="fade" mode="out-in">
-					<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki, juliamo: language=='jul' }">
-						<h1 v-html="content.greeting" class="display-4 pink-first-character"></h1><br>
-						<div v-html="content.intro">
-						</div>
-					</div>
-				</transition>
-			</div>
-		</div>
-		<transition name="fade" mode="out-in">
+			<transition name="fade" mode="out-in">
 			<div class="container-fluid no-horizontal-padding-margin" v-bind:key="language" v-bind:class="{juliamo: language=='jul'}">
 				<!-- Example row of columns -->
 				<div class="row card-row">
@@ -194,18 +194,17 @@
 					</div>
 				</div>
 			</div> <!-- /container -->
-		</transition>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/vue"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="js/text-data.js"></script>
-	<script src="js/gallery-data.js"></script>
-	<script src="js/index.js"></script>
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
-	<audio controls="controls" style="display: none;"></audio>
-</body>
+			</transition>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="js/text-data.js"></script>
+		<script src="js/index.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
+		<audio controls="controls" style="display: none;"></audio>
+	</body>
 </html>
