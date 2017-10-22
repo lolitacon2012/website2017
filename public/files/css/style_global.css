@@ -1,6 +1,5 @@
 /*html and body limitation. overflow-x: for mobile devices there is a small x overflow*/
 html, body {margin: 0; overflow-x: hidden}
-
 /*Language related classes*/
 @font-face {
 	font-family: juliamo;
@@ -45,8 +44,6 @@ body{
 	background-image: url("../img/pattern.jpg");
 	background-repeat: repeat;
 	font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", 游ゴシック, "Yu Gothic", sans-serif;
-	background-attachment: fixed;
-	background-size: 102.4px 91.2px;
 }
 
 
@@ -101,9 +98,6 @@ body{
 	text-align: center;
 	padding: auto;
 	color:#FFF;
-	cursor: pointer;
-	cursor: hand;
-
 }
 .top-toggled-menu-item.short{
 	height: 2.5rem;
@@ -169,14 +163,9 @@ body{
 	font-size: 0.7em;
 	min-width: 5rem;
 }
-#dropdownMenuButton{
-	cursor: pointer;
-	cursor: hand;
-}
+
 #top-nav .dropdown-item{
 	color: #FFF;
-	cursor: pointer;
-	cursor: hand;
 }
 #top-nav .dropdown-item:hover{
 	background: rgba(186,220,232,0.98);
@@ -187,6 +176,7 @@ body{
 	text-shadow: 0px 0px 10px #FFFFCC;
 }
 #top-nav.nav_hidden{
+	text-shadow: none;
 	top:-3rem;
 }
 #navbar_collapse_button{
@@ -196,16 +186,14 @@ body{
 	font-size:1.6rem;
 	height: 2rem;
 	width: 2rem;
+	overflow: hidden;
 	text-align: center;
 	color:#FFF;
 	display: none;
-	-webkit-transition: top 0.5s ease-in-out,-webkit-transform 0.5s ease-in-out;
-	-moz-transition: top 0.5s ease-in-out,-moz-transform 0.5s ease-in-out;
-	-o-transition: top 0.5s ease-in-out,-o-transform 0.5s ease-in-out;
-	-ms-transition: top 0.5s ease-in-out,-ms-transform 0.5s ease-in-out;
-	transition: top 0.5s ease-in-out,transform 0.5s ease-in-out;
-	cursor: pointer;
-	cursor: hand;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 #navbar_collapse_button.navbar_collapse_button_toggled{
 	-webkit-transform: rotate(90deg);
