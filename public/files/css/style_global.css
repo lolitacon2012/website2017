@@ -1,8 +1,6 @@
 /*html and body limitation. overflow-x: for mobile devices there is a small x overflow*/
 html, body {margin: 0; overflow-x: hidden}
-#app{
-	overflow-x: hidden;
-}
+
 /*Language related classes*/
 @font-face {
 	font-family: juliamo;
@@ -199,14 +197,14 @@ body{
 	font-size:1.6rem;
 	height: 2rem;
 	width: 2rem;
-	overflow: hidden;
 	text-align: center;
 	color:#FFF;
 	display: none;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+	-webkit-transition: top 0.5s ease-in-out,-webkit-transform 0.5s ease-in-out;
+	-moz-transition: top 0.5s ease-in-out,-moz-transform 0.5s ease-in-out;
+	-o-transition: top 0.5s ease-in-out,-o-transform 0.5s ease-in-out;
+	-ms-transition: top 0.5s ease-in-out,-ms-transform 0.5s ease-in-out;
+	transition: top 0.5s ease-in-out,transform 0.5s ease-in-out;
 	cursor: pointer;
 	cursor: hand;
 }
@@ -258,7 +256,6 @@ body{
 	padding-top:60px;
 	margin-bottom: -50px;
 	z-index: -2;
-	overflow-x: hidden;
 }
 
 .background-main h1{
