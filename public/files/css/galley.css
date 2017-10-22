@@ -9,7 +9,6 @@
 	background-size: cover;
 	background-position: bottom;
 	z-index: -2;
-	overflow: hidden;
 	padding-top:4.5rem;
 	margin-bottom: 0;
 }
@@ -40,17 +39,11 @@
 }
 }
 
-#gallery_timeline{
-	position: fixed;
-	left: 3rem;
-	top: 20rem;
-	width: 18rem;
-}
 .gallery_year_row{
-	margin-top: 0;
+	margin-top: 1rem;
 	margin-bottom: 4rem;
-	margin-left: 21rem;
-	margin-right:3rem;
+	margin-left: 10rem;
+	margin-right:10rem;
 	padding:3rem;
 	overflow: hidden;
 }
@@ -64,6 +57,7 @@
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 .gallery_location_card_container{
+	margin-top: 2rem;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
