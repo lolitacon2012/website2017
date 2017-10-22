@@ -3,6 +3,7 @@ var zhihu = require('zhihu');
 var app = express();
 var http = require("http");
 var https = require("https");
+var path = require("path");
 
 var steamApiKey = '918C2026B22CDA2B960E6F8B4C0E5A17';
 var steamIdKey = '76561198044961500';
@@ -44,6 +45,8 @@ app.get('/hello', function (req, res) {
 });
 
 app.use('/', express.static('public/files'));
+
+app.use('/img', express.static('public/files/img'));
 
 app.use('/blog', express.static('public/blog/public'));
 

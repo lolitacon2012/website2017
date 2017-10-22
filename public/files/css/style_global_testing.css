@@ -1,0 +1,9 @@
+.origin{
+	position: fixed;
+	left: 20em;
+	top:20rem;
+	transition: all 1s ease-in-out;
+}
+.rotate{
+    transform: rotate(122deg);
+}

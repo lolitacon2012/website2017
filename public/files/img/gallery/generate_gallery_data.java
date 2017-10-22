@@ -25,11 +25,12 @@ public class generate_gallery_data {
                 listFilesForFolder(fileEntry);
             } else {
                 String s = fileEntry.getPath();
+                System.out.println("Processing:" + s);
                 String[] parts = s.split("/");
                 if(parts.length<4){
+                    System.out.println("Error: Illegal path name, ignoring...");
                     continue;
                 }
-                System.out.println("Processing:" + s);
                 int this_year = Integer.parseInt(parts[1]);
                 int this_month = Integer.parseInt(parts[2]);
                 String this_location = parts[3];

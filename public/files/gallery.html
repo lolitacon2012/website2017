@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css" >
 	<link rel="stylesheet" href="css/style_global.css" >
 	<link rel="stylesheet" href="css/galley.css" >
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body>
 	<div class="pace-loading-background-upper"></div>
@@ -65,28 +66,53 @@
 				<div class="container">
 					<transition name="fade" mode="out-in">
 						<div v-bind:key="language" v-bind:class="{ juliamo: language=='jul' }">
-							<h1 v-html="content.nav_bar_gallery" class="pink-first-character"></h1><br>
+							<h1 v-html="content.nav_bar_gallery" class="pink-first-character" v-bind:class="{non_asian_text : language!='zh' && language!='ja'}"></h1><br>
 						</div>
 					</transition>
 				</div>
 			</div>
-			<div class="gallery_year_row" v-for="gallery_current_year in gallery_years">
-				<h1 class="gallery_year_title">{{gallery_current_year.year}}</h1>
-				<div class="gallery_location_card_container">
-					<gallery-card v-for="gallery_card in gallery_current_year.cards" :key="gallery_card.id" :photo_year="gallery_current_year.year" :photo_month="gallery_card.month" :photo_month_in_current_language="getMonthInCurrentLanguage(gallery_card.month)" :photo_location="gallery_card.location" :photo_location_in_current_language="getLocationInCurrentLanguage(gallery_card.location)" :photo_description="gallery_card.desc"></gallery-card>
+<transition name="fade" mode="out-in">
+			<div class="gallery_show" v-if="gallery_shown">
+				<div class="gallery_close_button" v-on:click="gallery_shown = false">
+					<svg width="44" height="44">
+						<g>
+							<rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+							<g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+								<rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+							</g>
+						</g>
+						<g>
+							<line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="40" x2="40" y1="4" x1="4" stroke-width="6" stroke="#000" fill="none"/>
+							<line transform="rotate(90 22,22) " stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="40" x2="40" y1="4" x1="4" stroke-width="6" stroke="#000" fill="none"/>
+						</g>
+					</svg>
 				</div>
+
+				<div class="main-gallery js-flickity">
+				<gallery-single-cell v-for="gallery_cell_photo_url in gallery_cell_photo_urls" :key="gallery_cell_photo_url" :photo_path_url="gallery_cell_photo_url">
+				</gallery-single-cell>
 			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/vue"></script>
-		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-		<script src="js/text-data.js"></script>
-		<script src="js/gallery-data.js"></script>
-		<script src="js/index.js"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
-		<audio controls="controls" style="display: none;"></audio>
-	</body>
-	</html>
+	</transition>
+		<div class="gallery_year_row" v-for="gallery_current_year in gallery_years">
+			<h1 class="gallery_year_title">{{gallery_current_year.year}}</h1>
+			<div class="gallery_location_card_container">
+				<gallery-card v-for="gallery_card in gallery_current_year.cards" :key="gallery_card.id" :photo_year="gallery_current_year.year" :photo_month="gallery_card.month" :photo_month_in_current_language="getMonthInCurrentLanguage(gallery_card.month)" :photo_location="gallery_card.location" :photo_location_in_current_language="getLocationInCurrentLanguage(gallery_card.location)" :photo_description="gallery_card.desc" :total_photos="gallery_card.total_photos" @click.native="updateGalleryPhotoUrls(gallery_current_year.year,gallery_card.month,gallery_card.location,gallery_card.total_photos)"></gallery-card>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="js/text-data.js"></script>
+	<script src="js/gallery-data.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/gallery.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
+	<audio controls="controls" style="display: none;"></audio>
+</body>
+</html>

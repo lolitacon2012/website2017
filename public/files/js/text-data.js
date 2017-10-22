@@ -14,7 +14,11 @@ var full_content = {
     locations:{
         izumo:"出雲",
         kyoto:"京都",
-        tokyo:"東京"
+        tokyo:"東京",
+        atsuta_jingu:"熱田神宮, 名古屋",
+        kashihara:"橿原",
+        kashihara_jingu:"橿原神宮, 橿原市",
+        nara:"奈良"
     }
   },
   epo : {
@@ -31,7 +35,11 @@ var full_content = {
     locations:{
         izumo:"Izumo",
         kyoto:"Kyoto",
-        tokyo:"Tokyo"
+        tokyo:"Tokyo",
+        atsuta_jingu:"Atsuta-Ĝingu, Nagoja",
+        kashihara:"Kaŝihara",
+        kashihara_jingu:"Kashihara-Ĝingu, Kashihara",
+        nara:"Nara"
     }
   },
   en : {
@@ -48,7 +56,11 @@ var full_content = {
         locations:{
         izumo:"Izumo",
         kyoto:"Kyoto",
-        tokyo:"Tokyo"
+        tokyo:"Tokyo",
+        atsuta_jingu:"Atsuta-Jingu, Nagoya",
+        kashihara:"Kashihara",
+        kashihara_jingu:"Kashihara-Jingu, Kashihara",
+        nara:"Nara"
     }
   },
   zh : {
@@ -65,7 +77,11 @@ var full_content = {
     locations:{
         izumo:"出雲",
         kyoto:"京都",
-        tokyo:"東京"
+        tokyo:"東京",
+        atsuta_jingu:"熱田神宮, 名古屋",
+        kashihara:"橿原",
+        kashihara_jingu:"橿原神宮, 橿原市",
+        nara:"奈良"
     }
   }
 };

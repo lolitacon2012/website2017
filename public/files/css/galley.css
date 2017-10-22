@@ -32,6 +32,9 @@
     letter-spacing: 5px;
     font-size: 3.8em;
 }
+.title-background-main h1.non_asian_text {
+    font-weight: lighter;
+}
 @media (max-width: 576px) {
 	.title-background-main h1 {
     font-size: 3em;
@@ -48,13 +51,58 @@
 	overflow: hidden;
 }
 .gallery_year_row h1{
-	text-shadow: 0 2px 3px #fff, 2px 0 3px #fff, 0 -2px 3px #fff, -2px 0 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff, -2px 2px 3px #fff, 2px 2px 3px #fff;
-    color: #495057;
+	/*text-shadow: 0 2px 3px #fff, 2px 0 3px #fff, 0 -2px 3px #fff, -2px 0 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff, -2px 2px 3px #fff, 2px 2px 3px #fff;*/
+    color: #FFF;
     font-weight: lighter;
-    letter-spacing: 20px;
-    font-size: 3em;
+    letter-spacing: 0;
+    font-size: 1.5rem;
     text-align: center;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    margin-left: 1rem;
+    margin-bottom: 3.5rem;
+    position: absolute;
+    font-weight: bolder;
+    transform: scaleY(0.85);
+    padding:0.3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+.gallery_year_row h1::before{
+	content:"";
+	background-color: #E865A1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+    position: absolute;
+    z-index: -4;
+    transform: skewY(-4deg);
+}
+.gallery_year_row h1::after{
+	content:"";
+	background-color: #65a7ff;
+	height: 100%;
+	width: 100%;
+	top: -7px;
+	left: -5px;
+    position: absolute;
+    z-index: -5;
+    transform: skewY(-4deg);
+}
+@media (max-width: 1200px) {
+	.gallery_year_row{
+		margin-bottom: 2rem;
+		margin-left: 4rem;
+		margin-right:4rem;
+		padding:2rem;
+	}
+}
+@media (max-width: 768px) {
+	.gallery_year_row{
+		margin-bottom: 2rem;
+		margin-left: 1rem;
+		margin-right:1rem;
+		padding:1rem;
+	}
 }
 .gallery_location_card_container{
 	margin-top: 2rem;
@@ -66,26 +114,31 @@
 }
 .gallery_location_card{
 	width: 28%;
-	height: 25rem;
+	height: auto;
 	max-width: 24rem;
 	min-width: 19rem;
-	margin:0 1rem;
+	margin:2rem 1rem;
 }
 .gallery_location_card p{
 	margin:0;
 	margin-top:-1rem;
+	padding-top: 0.5rem;
 	text-align: right;
 	font-size: 0.9rem;
 	font-weight: bold;
 	color: #E865A1;
+	margin-bottom: 1.2rem;
 }
 .gallery_location_card .gallery_location_card_place{
 	color: #65a7ff;
 }
 .gallery_location_card h5{
 	font-size: 1.1rem;
-	font-weight: normal;
-	margin-top: 5px;
+	line-height: 1.8rem;
+	font-weight: 400;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	padding: 0 1rem;
 }
 .gallery_location_card_img_container img{
 	display: block;
@@ -112,7 +165,78 @@
 	height: auto;
 	min-height: 5rem;
 	padding: 0 1rem;
+	padding-bottom: 1rem;
 }
 .gallery_location_card .gallery_location_card_text_container p, .gallery_location_card .gallery_location_card_text_container h5{
 	transform: skewY(4deg);
+}
+
+.gallery_show{
+	position: fixed;
+	left: 0;
+	top: 0;
+  	width: 100%;
+  	height: 100%;
+	z-index: 9890;
+	background: rgba(255,248,255,.8);
+}
+.gallery_close_button{
+	z-index: 9996;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 44px;
+	height: 44px;
+	background: hsla(0,0%,100%,.75);
+	border-radius: 50px;
+	text-align: center;
+	padding-top: 0px;
+}
+.gallery_close_button:hover{
+	background: #FFF;
+	cursor: hand;
+	cursor: pointer;
+}
+.gallery_close_button:active{
+	background: hsla(0,0%,100%,.65);
+}
+.gallery_close_button svg{
+	transform: scaleX(0.6) scaleY(0.6);
+}
+.main-gallery{
+	height: 85%;
+	width: auto;
+}
+
+.gallery-cell {
+	margin-top: 3rem;
+	width: 100%;
+  height: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+.gallery-cell:before {    /* create a full-height inline block pseudo=element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    height: 100%;
+    background: red;
+}
+.gallery-cell img{
+  	display: inline-block;
+    vertical-align: middle;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+    padding: 10px;
+    background-size: 23px 23px;
+    background-image: linear-gradient(
+    -45deg,
+    rgba(255,255,255,.9) 25%,
+    rgba(255,192,203,.9) 25%, rgba(255,192,203,.9) 50%,
+    rgba(255,255,255,.9) 50%, rgba(255,255,255,.9) 75%,
+    rgba(255,192,203,.9) 75%, rgba(255,192,203,.9)
+  );
 }

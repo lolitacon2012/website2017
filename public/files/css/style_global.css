@@ -1,14 +1,14 @@
 /*html and body limitation. overflow-x: for mobile devices there is a small x overflow*/
 html, body {margin: 0; overflow-x: hidden}
+#app{
+	overflow-x: hidden;
+}
 /*Language related classes*/
 @font-face {
 	font-family: juliamo;
 	src: url(../fonts/juliamo.woff);
 }
-@font-face{
-	font-family: Source Sans Pro Light;
-	src: url(../fonts/source-sans-pro.light.ttf);
-}
+
 .juliamo { 
 	font-family: juliamo;
 }
@@ -17,9 +17,6 @@ html, body {margin: 0; overflow-x: hidden}
 	-ms-writing-mode: tb-rl;
 	writing-mode: vertical-rl;
 	width: 100%;
-}
-.non_tategaki {
-	font-family: Source Sans Pro Light;
 }
 
 .non_tategaki.juliamo {
@@ -43,9 +40,10 @@ html, body {margin: 0; overflow-x: hidden}
 body{
 	background-image: url("../img/pattern.jpg");
 	background-repeat: repeat;
-	font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", 游ゴシック, "Yu Gothic", sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont, "ヒラギノ角ゴ ProN W3", 游ゴシック, "Yu Gothic",Roboto,"Helvetica Neue", Arial,sans-serif;
+	background-attachment: fixed;
+	background-size: 102.4px 91.2px;
 }
-
 
 /*Special font effects*/
 .pink-first-character::first-letter{
@@ -98,6 +96,9 @@ body{
 	text-align: center;
 	padding: auto;
 	color:#FFF;
+	cursor: pointer;
+	cursor: hand;
+
 }
 .top-toggled-menu-item.short{
 	height: 2.5rem;
@@ -163,9 +164,14 @@ body{
 	font-size: 0.7em;
 	min-width: 5rem;
 }
-
+#dropdownMenuButton{
+	cursor: pointer;
+	cursor: hand;
+}
 #top-nav .dropdown-item{
 	color: #FFF;
+	cursor: pointer;
+	cursor: hand;
 }
 #top-nav .dropdown-item:hover{
 	background: rgba(186,220,232,0.98);
@@ -194,6 +200,8 @@ body{
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+	cursor: hand;
 }
 #navbar_collapse_button.navbar_collapse_button_toggled{
 	-webkit-transform: rotate(90deg);
@@ -243,6 +251,7 @@ body{
 	padding-top:60px;
 	margin-bottom: -50px;
 	z-index: -2;
+	overflow-x: hidden;
 }
 
 .background-main h1{
@@ -265,14 +274,14 @@ body{
 	margin-top: 3.2rem;
 }
 .background-main .non_tategaki h1{
-	font-weight: 400;
+	font-weight: lighter;
 	letter-spacing: 3px;
 	font-size: 4em;
 	text-align: center;
 }
 .background-main .non_tategaki h4{
 	letter-spacing: 0;
-	font-weight: 400;
+	font-weight: lighter;
 	margin: 1em auto;
 	text-align: center;
 	line-height: 1.5em;
@@ -317,7 +326,6 @@ body{
 	}
 	.background-main h1{
 		letter-spacing: 3px;
-		font-weight: 500;
 		margin:0;
 	}
 	.background-main h4{
@@ -347,7 +355,6 @@ body{
 	.background-main h1{
 		letter-spacing: 3px;
 		font-size: 1.5em;
-		font-weight: 500;
 		margin-right:4%;
 
 	}

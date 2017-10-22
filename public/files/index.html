@@ -16,23 +16,22 @@
 	</head>
 	<body>
 		<div class="pace-loading-background-upper"></div>
-		<div class="pace-loading-background-bottom"></div>
 		<div id="app">
 			<header>
 				<div id="top-nav" v-bind:class="{ nav_pale_blue: isNotOnTop, nav_hidden: hideTopBarForMobile }">
-					<div class="top-nav-left-head" onclick="window.loation.href = 'https://kannagi.moe/'">
+					<div class="top-nav-left-head" onclick="window.location.href = 'https://kannagi.moe/'">
 						<img src="img/zhihu_avatar.jpg"/>
 					</div>
-					<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}" onclick="window.loation.href = 'https://kannagi.moe/'">
+					<div class="top-nav-left-name" v-bind:class="{juliamo: language=='jul'}" onclick="window.location.href = 'https://kannagi.moe/'">
 						{{content.nickname}}
 					</div>
 					<div class="topMenuButtons">
 					<div class="top-nav-right" v-bind:class="{juliamo: language=='jul'}">
-						<a href="#" class="prevent-default" onclick="window.open('https://kannagi.moe/blog/');">{{content.nav_bar_blog}}</a>
+						<a href="#" class="prevent-default" onclick="window.location.href = 'https://kannagi.moe/blog/'">{{content.nav_bar_blog}}</a>
 						<a href="#" class="prevent-default" onclick="sorry()">{{content.nav_bar_about}}</a>
-						<a href="#" class="prevent-default" onclick="sorry()">{{content.nav_bar_gallery}}</a>
+						<a href="#" class="prevent-default" onclick="window.location.href = 'https://kannagi.moe/gallery/'">{{content.nav_bar_gallery}}</a>
 					</div>
-					<div class="dropdown" style="cursor: pointer;cursor: hand;">
+					<div class="dropdown">
   <div class="dropdown-toggle top-nav-language" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fa fa-language" aria-hidden="true"></i>
   </div>
@@ -55,8 +54,8 @@
 					<div class="top-toggled-menu-item short" style="background:rgba(0,66,66,.1)" onclick="useLanguage('ja')" v-if="language!='ja'"><h3>日本語</h3></div>
 					<div class="top-toggled-menu-item short juliamo" style="background:rgba(33,66,33,.3)" onclick="useLanguage('jul')" v-if="language!='jul'"><h3>Juliamo</h3></div>
 					<div class="top-toggled-menu-item short" style="background:rgba(66,0,66,.2)" onclick="useLanguage('en')" v-if="language!='en'"><h3>English</h3></div>
-					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.open('https://kannagi.moe/blog/');"><h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_blog}}</h2></div>
-					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-camera-retro" aria-hidden="true"></i></h1><h2>{{content.nav_bar_gallery}}</h2></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.location.href = 'https://kannagi.moe/blog/'"><h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_blog}}</h2></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.location.href = 'https://kannagi.moe/gallery/'"><h1><i class="fa fa-camera-retro" aria-hidden="true"></i></h1><h2>{{content.nav_bar_gallery}}</h2></div>
 					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_about}}</h2></div>
 				</div>
 			</header>
@@ -201,8 +200,11 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/vue"></script>
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+			<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 		<script src="js/text-data.js"></script>
+		<script src="js/gallery-data.js"></script>
 		<script src="js/index.js"></script>
+
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<!-- script src="./Jumbotron Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script -->
 		<audio controls="controls" style="display: none;"></audio>

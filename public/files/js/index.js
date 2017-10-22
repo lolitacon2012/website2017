@@ -35,12 +35,47 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 
 //=========================Section 2: vue app initialization====================
 //text contents are loaded in text-data.js
+
+//Register vue component
+/*gallery image path&name: img/gallery/{{year}}.{{month}}.{{location}}.{{order}}.jpg
+  cover image uses image.order == 0
+*/
+Vue.component('gallery-card', {
+  props: ['photo_year','photo_month','photo_month_in_current_language','photo_location','photo_location_in_current_language','photo_description','total_photos'],
+  template: `<div class="gallery_location_card" >
+               <div class="gallery_location_card_img_container">
+               <img :src=photo_path />
+             </div>
+             <div class="gallery_location_card_text_container">
+               <p><span>{{ photo_month_in_current_language }}</span>, <span class="gallery_location_card_place">{{ photo_location_in_current_language }}</span></p> \
+               <h5>{{ photo_description }}</h5>
+             </div> 
+            </div>`,
+  data: function() {
+        return {
+            photo_path: "img/gallery/"+this.photo_year+"/"+this.photo_month+"/"+this.photo_location+"/0.jpg"
+        };
+    }
+});
+
+Vue.component('gallery-single-cell', {
+  props: ['photo_path_url'],
+  template: `<div class="gallery-cell">
+              <img src="img/placeholder.png" :data-flickity-lazyload="photo_path" />
+            </div>`,
+  data: function() {
+        return {
+            photo_path: this.photo_path_url
+        };
+    }
+});
+
 //initialize app vue
 var app = new Vue({
   el: '#app',
   data: {
     language: "epo",
-    isNotOnTop: false,
+  	isNotOnTop: false,
     hideTopBarForMobile: false,
     useTategaki: false,
     zhihu_state: 0,
@@ -53,7 +88,10 @@ var app = new Vue({
     steam_back_img: "img/cake.png",
     search_recommend_keyword: "Search recommend",
     isMenuOpened: false,
-    isMobile: isMobile
+    isMobile: isMobile,
+    gallery_years: gallery_data.data,
+    gallery_shown: false,
+    gallery_cell_photo_urls: ["img/placeholder.png","img/placeholder.png"]
   },
   computed: {
     zhihu_message: function () {
@@ -67,8 +105,39 @@ var app = new Vue({
     },
     content: function (){
       return full_content[this.language];
+    },
+  },
+  methods: {
+    getMonthInCurrentLanguage:function(month){
+      return this.content.months[month-1];
+    },
+    getLocationInCurrentLanguage:function(location_name){
+      if(this.content.locations[location_name]!==undefined){
+        return this.content.locations[location_name];
+      }else{
+        return location_name;
+      }
+    },
+    updateGalleryPhotoUrls:function(year,month,location,total_number_of_photos){
+      var urlPreFix = "img/gallery/"+year+"/"+month+"/"+location+"/";
+      this.gallery_cell_photo_urls = [];
+      for(var current_photo_index = 0; current_photo_index<total_number_of_photos; current_photo_index++){
+        this.gallery_cell_photo_urls.push(urlPreFix+""+current_photo_index+".jpg");
+      }
+      this.gallery_shown = true;
     }
-  }
+  },
+  updated: function () {
+  this.$nextTick(function () {
+    $carousel = $('.main-gallery').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  wrapAround: true,
+  lazyLoad: true
+});
+  })
+}
 })
 
 //=========================End of Section 2: vue app initialization====================
@@ -78,6 +147,13 @@ var app = new Vue({
 app.isNotOnTop = ($(window).scrollTop() >= 25);
 var lastScrollTop = $(window).scrollTop();
 var card_global_state = 0;
+var $carousel = $('.main-gallery').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  wrapAround: true,
+  lazyLoad: true
+});
 
 //initialize scrolling events.
 $(window).scroll(function() {
@@ -105,10 +181,10 @@ xhttp.open("GET", "https://kannagi.moe/get-api/fetch_zhihu_state?t=" + Math.rand
 xhttp.send();
 
 function prepareZhihuMessage(obj){
-  obj = JSON.parse(obj);
-  app.zhihu_message_list.push(obj["name"]);
-  app.zhihu_message_list.push(obj["follower"] + " Followers");
-  app.zhihu_message_list.push(obj["answer"] + " Answers");
+	obj = JSON.parse(obj);
+	app.zhihu_message_list.push(obj["name"]);
+	app.zhihu_message_list.push(obj["follower"] + " Followers");
+	app.zhihu_message_list.push(obj["answer"] + " Answers");
 }
 
 
@@ -165,8 +241,7 @@ var sorry = function(){
 }
 
 Pace.on('done', function() {
-  $(".pace-loading-background-upper").toggleClass("pace-done-move-up");
-  $(".pace-loading-background-bottom").toggleClass("pace-done-move-down");
+  $(".pace-loading-background-upper").toggleClass("pace-done");
 });
 
 function useLanguage(lang){

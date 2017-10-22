@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/style_global_testing.css" >
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<div id="top-nav">
+					<div class="origin" v-on:click="isMenuOpened = !isMenuOpened" v-bind:class="{rotate: isMenuOpened }">
+						<H1>Hi</H1>
+					</div>
+				</div>
+			</header>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="js/index-testing.js"></script>
+	</body>
+</html>
