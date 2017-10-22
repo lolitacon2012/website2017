@@ -1,5 +1,5 @@
 /*html and body limitation. overflow-x: for mobile devices there is a small x overflow*/
-html, body {margin: 0; overflow-x: hidden}
+html, body {margin: 0;}
 
 /*Language related classes*/
 @font-face {
