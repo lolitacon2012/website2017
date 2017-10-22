@@ -35,34 +35,12 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 
 //=========================Section 2: vue app initialization====================
 //text contents are loaded in text-data.js
-
-//Register vue component
-/*gallery image path&name: img/gallery/{{year}}.{{month}}.{{location}}.{{order}}.jpg
-  cover image uses image.order == 0
-*/
-Vue.component('gallery-card', {
-  props: ['photo_year','photo_month','photo_month_in_current_language','photo_location','photo_location_in_current_language','photo_description'],
-  template: `<div class="gallery_location_card">
-               <div class="gallery_location_card_img_container">
-               <img :src=photo_path />
-             </div>
-             <div class="gallery_location_card_text_container">
-               <p><span>{{ photo_month_in_current_language }}</span>, <span class="gallery_location_card_place">{{ photo_location_in_current_language }}</span></p> \
-               <h5>{{ photo_description }}</h5>
-             </div> 
-            </div>`,
-  data: function() {
-        return {
-            photo_path: "img/gallery/"+this.photo_year+"/"+this.photo_month+"/"+this.photo_location+"/0.jpg"
-        };
-    }
-});
 //initialize app vue
 var app = new Vue({
   el: '#app',
   data: {
     language: "epo",
-  	isNotOnTop: false,
+    isNotOnTop: false,
     hideTopBarForMobile: false,
     useTategaki: false,
     zhihu_state: 0,
@@ -75,8 +53,7 @@ var app = new Vue({
     steam_back_img: "img/cake.png",
     search_recommend_keyword: "Search recommend",
     isMenuOpened: false,
-    isMobile: isMobile,
-    gallery_years: gallery_data.data
+    isMobile: isMobile
   },
   computed: {
     zhihu_message: function () {
@@ -90,18 +67,6 @@ var app = new Vue({
     },
     content: function (){
       return full_content[this.language];
-    }
-  },
-  methods: {
-    getMonthInCurrentLanguage:function(month){
-      return this.content.months[month-1];
-    },
-    getLocationInCurrentLanguage:function(location_name){
-      if(this.content.locations[location_name]!==undefined){
-        return this.content.locations[location_name];
-      }else{
-        return location_name;
-      }
     }
   }
 })
@@ -140,10 +105,10 @@ xhttp.open("GET", "https://kannagi.moe/get-api/fetch_zhihu_state?t=" + Math.rand
 xhttp.send();
 
 function prepareZhihuMessage(obj){
-	obj = JSON.parse(obj);
-	app.zhihu_message_list.push(obj["name"]);
-	app.zhihu_message_list.push(obj["follower"] + " Followers");
-	app.zhihu_message_list.push(obj["answer"] + " Answers");
+  obj = JSON.parse(obj);
+  app.zhihu_message_list.push(obj["name"]);
+  app.zhihu_message_list.push(obj["follower"] + " Followers");
+  app.zhihu_message_list.push(obj["answer"] + " Answers");
 }
 
 
