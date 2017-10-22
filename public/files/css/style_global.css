@@ -199,11 +199,12 @@ body{
 	text-align: center;
 	color:#FFF;
 	display: none;
-	-webkit-transition: top 0.5s ease-in-out,-webkit-transform 0.5s ease-in-out;
+	/*-webkit-transition: top 0.5s ease-in-out,-webkit-transform 0.5s ease-in-out;
 	-moz-transition: top 0.5s ease-in-out,-moz-transform 0.5s ease-in-out;
 	-o-transition: top 0.5s ease-in-out,-o-transform 0.5s ease-in-out;
 	-ms-transition: top 0.5s ease-in-out,-ms-transform 0.5s ease-in-out;
-	transition: top 0.5s ease-in-out,transform 0.5s ease-in-out;
+	transition: top 0.5s ease-in-out,transform 0.5s ease-in-out;*/
+	transition: top 0.5s ease-in-out;
 	cursor: pointer;
 	cursor: hand;
 }
@@ -213,7 +214,7 @@ body{
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
-    top:0.4rem;
+    /*top:0.4rem;*/
 }
 
 
