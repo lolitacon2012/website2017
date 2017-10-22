@@ -46,10 +46,6 @@ app.get('/hello', function (req, res) {
 
 app.use('/', express.static('public/files'));
 
-app.get('/gallery',function(req,res){
-  res.sendFile(path.join(__dirname+'/public/files/gallery.html'));
-});
-
 app.use('/blog', express.static('public/blog/public'));
 
 app.get('/get-api/fetch_zhihu_state',function(req,res){
