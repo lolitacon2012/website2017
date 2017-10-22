@@ -16,7 +16,6 @@
 </head>
 <body>
 	<div class="pace-loading-background-upper"></div>
-	<div class="pace-loading-background-bottom"></div>
 	<div id="app">
 		<header>
 			<div id="top-nav" v-bind:class="{ nav_pale_blue: isNotOnTop, nav_hidden: hideTopBarForMobile }">
@@ -45,7 +44,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div id="navbar_collapse_button" v-on:click="isMenuOpened = !isMenuOpened" v-bind:class="{navbar_collapse_button_toggled: isMenuOpened }">
 					<i class="fa fa-bars" aria-hidden="true"></i>
 				</div>
