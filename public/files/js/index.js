@@ -44,7 +44,7 @@ Vue.component('gallery-card', {
   props: ['photo_year','photo_month','photo_month_in_current_language','photo_location','photo_location_in_current_language','photo_description','total_photos'],
   template: `<div class="gallery_location_card" >
                <div class="gallery_location_card_img_container">
-               <img :src=photo_path />
+               <img class="gallery_location_card_img" :src=photo_path />
              </div>
              <div class="gallery_location_card_text_container">
                <p><span>{{ photo_month_in_current_language }}</span>, <span class="gallery_location_card_place">{{ photo_location_in_current_language }}</span></p> \
@@ -106,6 +106,9 @@ var app = new Vue({
     content: function (){
       return full_content[this.language];
     },
+    isLandscape: function (){
+      return window.matchMedia("(orientation: landscape)").matches;
+    }
   },
   methods: {
     getMonthInCurrentLanguage:function(month){
@@ -124,19 +127,22 @@ var app = new Vue({
       for(var current_photo_index = 0; current_photo_index<total_number_of_photos; current_photo_index++){
         this.gallery_cell_photo_urls.push(urlPreFix+""+current_photo_index+".jpg");
       }
+
       this.gallery_shown = true;
     }
   },
   updated: function () {
-  this.$nextTick(function () {
+    if(this.gallery_shown){this.$nextTick(function () {
     $carousel = $('.main-gallery').flickity({
-  // options
+      prevNextButtons: this.isLandscape || (!this.isMobile),
   cellAlign: 'left',
   contain: true,
-  wrapAround: true,
-  lazyLoad: true
+  wrapAround: (this.isMobile),
+  lazyLoad: true,
+  pageDots: (!this.isLandscape) || (!this.isMobile)
 });
-  })
+  });}
+      
 }
 })
 

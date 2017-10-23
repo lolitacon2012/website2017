@@ -260,6 +260,7 @@ body{
 	font-weight: 400;
 	letter-spacing: 5px;
 	font-size: 3em;
+	-webkit-transform: translate3d(0,0,0);
 }
 .background-main h4{
 	color: #224252;
@@ -547,6 +548,7 @@ body{
 	margin-bottom:20px;
 	font-weight: lighter;
 	font-size:3.2em;
+	-webkit-transform: translate3d(0,0,0);
 }
 
 #bottom_search_bar_container{
