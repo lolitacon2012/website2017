@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kannagi Peekumii&#39;s Blog</title>
+  <id>https://kannagi.moe/blog</id>
+  <updated>2017-10-24T22:11:19+08:00</updated>
+  <subtitle>关注计算机技术、自然语言、东亚文化以及各种有趣的事物</subtitle>
+  <link href="https://kannagi.moe/blog"></link>
+  <author>
+    <name>Kannagi Peekumii&#39;s Blog</name>
+  </author>
+  <entry>
+    <title>Hello World! 关于重写中的kannagi.moe</title>
+    <updated>2017-10-18T18:23:26+08:00</updated>
+    <id>tag:kannagi.moe,2017-10-18:/blog/hello-world.html</id>
+    <content type="html">&lt;p&gt;一年一度的重做网站，这次尝试用了一些新玩意，感觉还蛮不错。&lt;/p&gt;&#xA;</content>
+    <link href="https://kannagi.moe/blog/hello-world.html"></link>
+    <author>
+      <name>巫部親雲上</name>
+    </author>
+  </entry>
+</feed>

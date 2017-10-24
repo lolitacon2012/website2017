@@ -80,7 +80,7 @@ var full_content = {
         tokyo:"東京",
         atsuta_jingu:"熱田神宮, 名古屋",
         kashihara:"橿原",
-        kashihara_jingu:"橿原神宮, 橿原市",
+        kashihara_jingu:"橿原神宮, 橿原",
         nara:"奈良"
     }
   }

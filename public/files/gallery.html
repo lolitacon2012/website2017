@@ -29,6 +29,7 @@
 				</div>
 				<div class="topMenuButtons">
 					<div class="top-nav-right" v-bind:class="{juliamo: language=='jul'}">
+						<a href="#" class="prevent-default" onclick="window.location.href = 'https://kannagi.moe/blog/'">{{content.nav_bar_home}}</a>
 						<a href="#" class="prevent-default" onclick="window.location.href = 'https://kannagi.moe/blog/'">{{content.nav_bar_blog}}</a>
 						<a href="#" class="prevent-default" onclick="sorry()">{{content.nav_bar_about}}</a>
 					</div>
@@ -55,6 +56,7 @@
 					<div class="top-toggled-menu-item short" style="background:rgba(0,66,66,.1)" onclick="useLanguage('ja')" v-if="language!='ja'"><h3>日本語</h3></div>
 					<div class="top-toggled-menu-item short juliamo" style="background:rgba(33,66,33,.3)" onclick="useLanguage('jul')" v-if="language!='jul'"><h3>Juliamo</h3></div>
 					<div class="top-toggled-menu-item short" style="background:rgba(66,0,66,.2)" onclick="useLanguage('en')" v-if="language!='en'"><h3>English</h3></div>
+					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.location.href = 'https://kannagi.moe/'"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_home}}</h2></div>
 					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="window.location.href = 'https://kannagi.moe/blog/'"><h1><i class="fa fa-pencil-square-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_blog}}</h2></div>
 					<div class="top-toggled-menu-item" v-bind:class="{juliamo: language=='jul'}" onclick="sorry()"><h1><i class="fa fa-file-text-o" aria-hidden="true"></i></h1><h2>{{content.nav_bar_about}}</h2></div>
 				</div>

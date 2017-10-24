@@ -784,8 +784,6 @@ a.name {
 	text-align: center;
 	padding: auto;
 	color:#FFF;
-    cursor: pointer;
-    cursor: hand;
 }
 .top-toggled-menu-item.short{
 	height: 2.5rem;
@@ -801,7 +799,7 @@ a.name {
     font-weight: 500;
 }
 .top-toggled-menu-item h1{
-	font-size: 1.8em;
+	font-size: 1.7em;
     margin-bottom: 0;
     margin-top: 0.6em;
 }
@@ -859,15 +857,11 @@ a.name {
 
 #top-nav .dropdown-item{
 	color: #FFF;
-    cursor: pointer;
-    cursor: hand;
 }
 #top-nav .dropdown-item:hover{
 	background: rgba(186,220,232,0.98);
 }
 #navbar_collapse_button{
-    cursor: pointer;
-    cursor: hand;
 	position: absolute;
 	right: 3rem;
 	top:0.5rem;
