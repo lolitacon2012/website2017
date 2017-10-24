@@ -18,7 +18,8 @@ var full_content = {
         atsuta_jingu:"熱田神宮, 名古屋",
         kashihara:"橿原",
         kashihara_jingu:"橿原神宮, 橿原市",
-        nara:"奈良"
+        nara:"奈良",
+        fuchu:"府中"
     }
   },
   epo : {
@@ -39,7 +40,8 @@ var full_content = {
         atsuta_jingu:"Atsuta-Ĝingu, Nagoja",
         kashihara:"Kaŝihara",
         kashihara_jingu:"Kashihara-Ĝingu, Kashihara",
-        nara:"Nara"
+        nara:"Nara",
+        fuchu:"Fuĉu"
     }
   },
   en : {
@@ -60,7 +62,8 @@ var full_content = {
         atsuta_jingu:"Atsuta-Jingu, Nagoya",
         kashihara:"Kashihara",
         kashihara_jingu:"Kashihara-Jingu, Kashihara",
-        nara:"Nara"
+        nara:"Nara",
+        fuchu:"Fuchu"
     }
   },
   zh : {
@@ -81,7 +84,8 @@ var full_content = {
         atsuta_jingu:"熱田神宮, 名古屋",
         kashihara:"橿原",
         kashihara_jingu:"橿原神宮, 橿原",
-        nara:"奈良"
+        nara:"奈良",
+        fuchu:"府中"
     }
   }
 };
