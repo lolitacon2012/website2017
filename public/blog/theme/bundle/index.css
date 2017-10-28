@@ -932,7 +932,6 @@ a.name {
 }
 .title-background-main-container {
     margin-right: auto;
-    margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
     width: 100%;
@@ -1007,4 +1006,7 @@ a.name {
 
 .pink-first-character::first-letter{
     color: #E865A1;
+}
+*, ::after, ::before {
+    box-sizing: inherit;
 }
