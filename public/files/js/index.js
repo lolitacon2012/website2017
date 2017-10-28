@@ -31,6 +31,25 @@ var isEdge = !isIE && !!window.StyleMedia;
 
 // Chrome 1+
 var isChrome = !!window.chrome && !!window.chrome.webstore;
+var use_tategaki = false;
+var language = getCookie("kannagi_language");
+    if (language == "") {
+        language = navigator.language || navigator.userLanguage;
+        if(language=="zh" || language=="zho" || language=="chi"){
+          setCookie("language", "zh", 365);
+          use_tategaki= true;
+        }else if(language=="en" || language=="eng"){
+          setCookie("language", "en", 365);
+        }else if(language=="ja" || language=="jpn"){
+          setCookie("language", "ja", 365);
+          use_tategaki= true;
+        }else if(language=="epo" || language=="eo"){
+          setCookie("language", "epo", 365);
+        }else{
+          setCookie("language", "jul", 365);
+        }
+    }
+
 //=========================End of Section 1: device detection====================
 
 //=========================Section 2: vue app initialization====================
@@ -74,10 +93,11 @@ Vue.component('gallery-single-cell', {
 var app = new Vue({
   el: '#app',
   data: {
-    language: "epo",
+    language: language,
   	isNotOnTop: false,
     hideTopBarForMobile: false,
-    useTategaki: false,
+    useTategaki: use_tategaki,
+    short_intro_state:0,
     zhihu_state: 0,
     zhihu_message_list: ["Zhihu"],
     steam_state: 0,
@@ -232,6 +252,11 @@ setInterval(function(){
 }, 1400);
 }
 
+//main page intro
+setInterval(function(){
+    app.short_intro_state = ((app.short_intro_state + 1)%(app.content.intro.length));
+}, 3900);
+
 //=========================End of Section 4: fetch & set data=================================
 
 
@@ -264,4 +289,26 @@ $('.prevent-default').click(function(e)
     // Cancel the default action
     e.preventDefault();
 });
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 //=========================End of Section 5: utilities=================================

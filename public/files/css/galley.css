@@ -34,7 +34,13 @@
 }
 .title-background-main h1.non_asian_text {
     font-weight: lighter;
+    font-family: sofia;
 }
+
+.title-background-main h1.non_asian_text.juliamo {
+    font-family: juliamo;
+}
+
 @media (max-width: 1200px) {
 	.title-background-main h1 {
     font-size: 3em;

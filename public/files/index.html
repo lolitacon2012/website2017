@@ -64,10 +64,12 @@
 				<div class="container">
 					<transition name="fade" mode="out-in">
 						<div v-bind:key="language" v-bind:class="{ margin_for_tategaki: useTategaki, margin_for_non_tategaki: !useTategaki, tategaki: useTategaki, non_tategaki: !useTategaki, juliamo: language=='jul' }">
-							<h1 v-html="content.greeting" class="display-4 pink-first-character"></h1><br>
-							<div v-html="content.intro">
-							</div>
+							<h1 class="display-4 pink-first-character">{{content.nickname}}</h1><br>
+							<transition name="fade" mode="out-in">
+								<h4 v-bind:key="short_intro_state" v-html="content.intro[short_intro_state]"></h4>
+							</transition>
 						</div>
+							
 					</transition>
 				</div>
 			</div>

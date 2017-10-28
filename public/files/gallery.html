@@ -65,8 +65,8 @@
 			<div class="jumbotron title-background-main">
 				<div class="container">
 					<transition name="fade" mode="out-in">
-						<div v-bind:key="language" v-bind:class="{ juliamo: language=='jul' }">
-							<h1 v-html="content.nav_bar_gallery" class="pink-first-character" v-bind:class="{non_asian_text : language!='zh' && language!='ja'}"></h1><br>
+						<div v-bind:key="language">
+							<h1 v-html="content.nav_bar_gallery" class="pink-first-character" v-bind:class="{non_asian_text : language!='zh' && language!='ja', juliamo: language=='jul'}"></h1><br>
 						</div>
 					</transition>
 				</div>

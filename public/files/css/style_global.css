@@ -8,6 +8,10 @@ html, body {margin: 0; overflow-x: hidden}
 	font-family: juliamo;
 	src: url(../fonts/juliamo.woff);
 }
+@font-face {
+	font-family: sofia;
+	src: url(../fonts/sofia.woff2);
+}
 
 .juliamo { 
 	font-family: juliamo;
@@ -16,7 +20,6 @@ html, body {margin: 0; overflow-x: hidden}
 	-webkit-writing-mode: vertical-rl;
 	-ms-writing-mode: tb-rl;
 	writing-mode: vertical-rl;
-	width: 100%;
 }
 
 .non_tategaki.juliamo {
@@ -38,11 +41,10 @@ html, body {margin: 0; overflow-x: hidden}
 }
 
 body{
-	background-image: url("../img/pattern.jpg");
+	background-image: url("../img/pattern.png");
 	background-repeat: repeat;
 	font-family: -apple-system,BlinkMacSystemFont, "ヒラギノ角ゴ ProN W3", 游ゴシック, "Yu Gothic",Roboto,"Helvetica Neue", Arial,sans-serif;
 	background-attachment: fixed;
-	background-size: 102.4px 91.2px;
 }
 
 /*Special font effects*/
@@ -253,40 +255,85 @@ body{
 	z-index: -2;
 	overflow-x: hidden;
 }
-
-.background-main h1{
+.background-main .non_tategaki h1:hover{
+	color: #E865A1;
+	transform: scale(1.04) rotate(1deg);
+}
+.background-main .tategaki h1:hover{
+	color: #E865A1;
+	transform: scale(1.05) rotate(1deg);
+}
+.background-main .tategaki h1{
+	cursor: default;
+	position: absolute;
 	text-shadow: 0 2px 3px #fff, 2px 0 3px #fff, 0 -2px 3px #fff, -2px 0 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff, -2px 2px 3px #fff, 2px 2px 3px #fff;
 	color: #65a7ff;
-	font-weight: 400;
-	letter-spacing: 5px;
-	font-size: 3em;
+	font-weight: 400;	
+	letter-spacing: 15px;
+	font-size: 5em;
 	-webkit-transform: translate3d(0,0,0);
+	margin: 0;
+	top: 1.6em;
+  	left: 0;
+  	right: 0;
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	width: 2em;
+  	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
 }
-.background-main h4{
+.background-main .tategaki h4{
+	cursor: default;
+	position: absolute;
 	color: #224252;
 	font-weight: 400;
 	letter-spacing: 0.1em;
-	margin: 0 2.6em;
-	line-height: 2em;
+	line-height: 3em;
 	font-size: 1.2em;
+	text-align: right;
+	height: 27em;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+  	margin-right: auto;
+  	width: 0em;
 }
 .margin_for_tategaki{
-	margin-right:10em;
-	margin-top: 3.2rem;
+	display: block;
+  	margin: 0 auto;
 }
 .background-main .non_tategaki h1{
+	cursor: default;
+	-webkit-transform: translate3d(0,0,0);
+	text-shadow: 0 2px 3px #fff, 2px 0 3px #fff, 0 -2px 3px #fff, -2px 0 3px #fff, -2px -2px 3px #fff, 2px -2px 3px #fff, -2px 2px 3px #fff, 2px 2px 3px #fff;
+	color: #65a7ff;
+	font-family: sofia;
 	font-weight: lighter;
-	letter-spacing: 3px;
-	font-size: 4em;
+	letter-spacing: 0px;
+	font-size: 6.2em;
 	text-align: center;
+	margin-top: 1.6em;
+	margin-bottom: 0;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+.background-main .non_tategaki.juliamo h1{
+	font-family: juliamo;
 }
 .background-main .non_tategaki h4{
+	cursor: default;
 	letter-spacing: 0;
-	font-weight: lighter;
-	margin: 1em auto;
+	font-weight: normal;
+	margin: 0.5em auto;
 	text-align: center;
-	line-height: 1.5em;
-	font-size: 1.6em;
+	line-height: 2em;
+	font-size: 1.3em;
+	color: #224252;
 }
 @media (max-width: 1200px) {
 	.background-main{
@@ -294,29 +341,23 @@ body{
 		padding-right:5px;
 		min-height: 800px;
 	}
-	.background-main h1{
-		letter-spacing: 3px;
-		margin:0.5em 0.5em;
-		font-size:3em;
+	.background-main .tategaki h1{
+		font-size: 4.5em;
+		top:1.1em;
 	}
-	.background-main h4{
-		margin: 2em 1em; 
-		font-size: 1.2em;
-		line-height: 1.7em;
-	}
-	.margin_for_tategaki{
-		margin-right:8em;
+	.background-main .tategaki h4{
+		height: 24em;
 	}
 	.background-main .non_tategaki h1{
-		margin:0;
+		margin-top:1.2em;
 	}
 	.background-main .non_tategaki h4{
 		margin: 0.8em auto;
 		line-height: 1.4em;
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 	.extend_for_non_tategaki{
-		min-height: 920px;
+		min-height: 650px;
 	}
 }
 @media (max-width: 768px) {
@@ -325,25 +366,25 @@ body{
 		height: 75vh;
 		min-height: 795px;
 	}
-	.background-main h1{
-		letter-spacing: 3px;
-		margin:0;
+	.background-main .tategaki h1{
+		font-size: 4em;
+		top:1.3em;
 	}
-	.background-main h4{
-		margin: 2em 1em; 
-		font-size: 1.3em;
-		line-height: 1.5em;
+	.background-main .tategaki h4{
+		height: 23em;
+		font-size: 1.2em;
 	}
 	.margin_for_tategaki{
 		margin-right:2.5em;
 	}
 	.background-main .non_tategaki h1{
-		margin:0;
+		margin-top:2em;
+		font-size: 4em;
 	}
 	.background-main .non_tategaki h4{
 		margin: 0.8em auto;
 		line-height: 1.4em;
-		font-size: 1.2em;
+		font-size: 1.1em;
 	}
 }
 
@@ -353,42 +394,23 @@ body{
 		height: 60vh;
 		min-height: 600px;
 	}
-	.background-main h1{
-		letter-spacing: 3px;
-		font-size: 1.5em;
-		margin-right:4%;
-
+	.background-main .tategaki h1{
+		font-size: 3em;
+		top:1.5em;
+		width: 2em;
 	}
-	.background-main h4{
-		margin: 0 0.6em;
-		font-size: 0.9em;
-		line-height: 1.2em;
-	}
-	.margin_for_tategaki{
-		margin-right:2em;
+	.background-main .tategaki h4{
+		height: 24em;
+		font-size: 1em;
+		line-height: 4em;
 	}
 	.background-main .non_tategaki h1{
 		font-size: 3.5em;
 	}
 	.extend_for_non_tategaki{
-		min-height: 940px;
+		min-height: 620px;
 	}
 }
-@media (max-width: 370px) {
-	.background-main h1{
-		margin-right: 0;
-	}
-	.margin_for_tategaki{
-		margin-right:1%;
-	}
-	.background-main .non_tategaki h1{
-		font-size: 3em;
-	}
-	.extend_for_non_tategaki{
-		min-height: 1000px;
-	}
-}
-
 
 
 /*cards on index*/

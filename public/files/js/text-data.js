@@ -3,7 +3,7 @@ var full_content = {
   ja : {
     nickname:"巫部親雲上",
     greeting:"やっはろー",
-    intro:"<h4>システムエンジニアであり、<br><ruby>巫部親雲上<rt>かんなぎぺえぐみい</rt></ruby>と申します。</h4><h4>大学卒業してから、<br>ずっとシンガポールで働いています。</h4><h4>歴史が好き、古典が好き、<br>神仏にも興味があるので、<br>よく巡礼の旅に出ます。</h4><h4>語学が好き、読書が好き、</h4><h4>今が一番大好きです。</h4>",
+    intro:["<h4>ソフトウェアエンジニア</h4>","<h4>語学が好きな人</h4>","<h4>夢想家</h4>","<h4>神道・仏教</h4>","<h4>聖地巡礼</h4>","<h4>計算機科学</h4>","<h4>沖縄病</h4>","<h4>本を読んだりとか</h4>","<h4>エスペラント話者</h4>","<h4>アマチュアの東アジア史愛好家</h4>"],
     search_bar_title:"綺麗なものを探しに行こう。",
     search_bar_recommend:"（おすすめがまだない）",
     nav_bar_home:"ホーム",
@@ -25,7 +25,7 @@ var full_content = {
   epo : {
     nickname:"Kannagi Peekumij",
     greeting:"Bonvenon.",
-    intro:"<h4>Mi estas programaro inĝeniero el Ĉinio kaj mia nomo estas Kannagi Peekumij, <br>nun laboras en Singapuro.</h4><h4>Dum la universitato mi studis computikan sciencon kaj Japana religio.</h4><h4>Mi tre ŝatas orientaj aziaj historioj kaj klasikaj literaturoj, <br>tial mi ofte trovas al temploj, sanktejoj kaj muzeoj.</h4><h4>Ankaŭ mi ŝatas studi lingvojn kaj legi librojn.</h4><h4>Mi esperas, ke vi havas bonan ĉiutagojn!</h4>",
+    intro:["<h4>La programara inĝeniero.</h4>","<h4>La entuziasmulo de lingvo.</h4>","<h4>La revulo.</h4>","<h4>Komputika Scienco.</h4>","<h4>La ŝintoa esploristo.</h4>","<h4>La vojaĝanto.</h4>","<h4>La okinaŭvisto.</h4>","<h4>La leganto de libroj.</h4>","<h4>La Esperantisto.</h4>","<h4>La amatora ŝatanto de Orienta asia historio.</h4>"],
     search_bar_title:"Iru serĉi ion belan!",
     search_bar_recommend:"(Ne estas rekomendindaj)",
     nav_bar_home:"Hejmo",
@@ -47,7 +47,7 @@ var full_content = {
   en : {
     nickname:"Kannagi Peekumii",
     greeting:"Hello there.",
-    intro:"<h4>This is Kannagi Peekumii, a software engineer from China. <br>I'm now working in Singapore.</h4><h4>I'm very interested in east Asian history, religions and classical literature. <br>I spend a lot of time visiting temples, shrines and museums during vacation.</h4><h4>As a linguaphile, I'm also enthusiastic in language studies and linguistics.</h4><h4>And, I love reading books.</h4><h4>I wish you to have a good day.</h4>",
+    intro:["<h4>Software Engineer.</h4>","<h4>Linguaphile.</h4>","<h4>Daydreamer.</h4>","<h4>Shintoism & Buddhism</h4>","<h4>Traveller.</h4>","<h4>Okinawa enthusiast.</h4>","<h4>Book reader.</h4>","<h4>Esperantist.</h4>","<h4>East Asian History & Culture.</h4>","<h4>Computer science.</h4>"],
     search_bar_title:"Looking for something?",
     search_bar_recommend:"(There is no recommends yet)",
     nav_bar_home:"Home",
@@ -69,7 +69,7 @@ var full_content = {
   zh : {
     nickname:"巫部親雲上",
     greeting:"巫部親雲上",
-    intro:"<h4>来自華北的普通程序員，現居星洲。</h4><h4>喜歓東亞宗教、歴史和古典文学，<br>常出入扶桑各地神社寺庙以及考古博物館，<br>樂此不疲。</h4><h4>粗通洋文，對語言学有所涉獵，<br>但除英日二語之外尚不足以流暢交談。</h4><h4>好讀書不求甚解，<br>關注技術而欠缺實践。</h4><h4>對世界充滿好奇，<br>姑且算是個熱愛生活的人吧。</h4>",
+    intro:["<h4>软件工程师</h4>","<h4>语言爱好者</h4>","<h4>白日做梦</h4>","<h4>神道・佛教</h4>","<h4>圣地巡礼・旅行</h4>","<h4>冲绳学</h4>","<h4>喜欢读书</h4>","<h4>世界语者</h4>","<h4>东亚历史文化民科</h4>","<h4>计算机科学</h4>"],
     search_bar_title:"在找点什么呢？",
     search_bar_recommend:"（暫無推荐）",
     nav_bar_home:"首頁",
