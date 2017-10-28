@@ -967,12 +967,12 @@ a.name {
 }
 @media (max-width: 576px) {
     .title-background-main{
-        height: 10rem;
-        min-height: 8rem;
-        margin-top: 3rem;
+        height: 160px;
+        min-height: 128px;
+        margin-top: 72px;
         margin-bottom: 0;
         padding:0;
-        padding-top:3rem;
+        padding-top:72px;
     }
     body {
         background-size: 67px 61px;
