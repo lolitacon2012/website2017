@@ -913,6 +913,13 @@ a.name {
 		display: block;
 	}
 }
+
+.title-background-main-container {
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
 @media (min-width: 1200px)
 {.title-background-main-container {
     max-width: 1140px;
@@ -930,12 +937,7 @@ a.name {
     max-width: 540px;
 }
 }
-.title-background-main-container {
-    margin-right: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
-}
+
 @media (min-width: 576px){
 .jumbotron {
     padding: 4rem 2rem;
