@@ -916,6 +916,7 @@ a.name {
 
 .title-background-main-container {
     margin-right: auto;
+    margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
     width: 100%;
@@ -968,11 +969,11 @@ a.name {
 @media (max-width: 576px) {
     .title-background-main{
         height: 160px;
-        min-height: 128px;
-        margin-top: 72px;
+        min-height: 112px;
+        margin-top: 48px;
         margin-bottom: 0;
         padding:0;
-        padding-top:72px;
+        padding-top:48px;
     }
     body {
         background-size: 67px 61px;
@@ -1006,13 +1007,13 @@ a.name {
 @media (max-width: 768px) {
     .title-background-main h1 {
     margin-top: 1rem;
-    margin-right: 1rem;
+    margin-right: 2.1rem;
 }
 }
 @media (max-width: 576px) {
     .title-background-main h1 {
     margin-top: -0.4rem;
-    margin-right: 0.6rem;
+    margin-right: 2.4rem;
 }
 }
 
