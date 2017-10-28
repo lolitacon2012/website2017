@@ -708,7 +708,8 @@ a.name {
 .container {
     height: auto;
     min-height: 100%;
-    padding-bottom: 0
+    padding-bottom: 0;
+    overflow: hidden;
 }
 .footer {
     width: 100%;
