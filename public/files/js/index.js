@@ -35,20 +35,26 @@ var use_tategaki = false;
 var language = getCookie("kannagi_language");
     if (language == "") {
         language = navigator.language || navigator.userLanguage;
-        if(language=="zh" || language=="zho" || language=="chi"){
-          setCookie("language", "zh", 365);
-          use_tategaki= true;
-        }else if(language=="en" || language=="eng"){
-          setCookie("language", "en", 365);
-        }else if(language=="ja" || language=="jpn"){
-          setCookie("language", "ja", 365);
-          use_tategaki= true;
-        }else if(language=="epo" || language=="eo"){
-          setCookie("language", "epo", 365);
-        }else{
-          setCookie("language", "jul", 365);
         }
-    }
+if(language=="zh" || language=="zho" || language=="chi" || language.indexOf("zh") !== -1){
+          setCookie("kannagi_language", "zh", 365);
+          language = "zh";
+          use_tategaki= true;
+        }else if(language=="en" || language=="eng" || language.indexOf("en") !== -1){
+          language = "en";
+          setCookie("kannagi_language", "en", 365);
+        }else if(language=="ja" || language=="jpn" || language.indexOf("ja") !== -1){
+          language = "ja";
+          setCookie("kannagi_language", "ja", 365);
+          use_tategaki= true;
+        }else if(language=="epo" || language=="eo" || language.indexOf("ep") !== -1){
+          language = "epo";
+          setCookie("kannagi_language", "epo", 365);
+        }else{
+          language = "jul";
+          setCookie("kannagi_language", "jul", 365);
+        }
+      
 
 //=========================End of Section 1: device detection====================
 
@@ -283,6 +289,7 @@ function useLanguage(lang){
   }
   app.language = lang;
   app.isMenuOpened = false;
+  setCookie("kannagi_language", lang, 365);
 }
 $('.prevent-default').click(function(e)
 {
@@ -294,7 +301,7 @@ function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";";
 }
 function getCookie(cname) {
     var name = cname + "=";
