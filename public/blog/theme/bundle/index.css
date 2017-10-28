@@ -69,9 +69,6 @@ a {
     text-decoration: none;
     color: #E865A1;
 }
-a:hover {
-    opacity: .9
-}
 ::-moz-selection {
     background-color: #E865A1;
     color: #fefefe
