@@ -772,7 +772,7 @@ a.name {
 	top: 0;
 }
 .collapsed_toggle_menu{
-	top:-14rem;
+	top:-16rem;
 }
 
 .top-toggled-menu-item{
@@ -911,4 +911,67 @@ a.name {
 	#navbar_collapse_button{
 		display: block;
 	}
+}
+
+.title-background-main{
+    border-radius: .3rem;
+    height: 15vh;
+    min-height: 15rem;
+    text-align: right;
+    background-image: url(https://kannagi.moe/img/bg-short.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -2;
+    padding-top:4.5rem;
+    margin-bottom: 0;
+}
+@media (max-width: 576px) {
+    .title-background-main{
+        height: 10rem;
+        min-height: 8rem;
+        margin-top: 3rem;
+        margin-bottom: 0;
+        padding:0;
+        padding-top:3rem;
+    }
+    body {
+        background-size: 67px 61px;
+    }
+}
+.title-background-main h1 {
+    text-shadow: 0 0 5px #fff,0 0 6px #fff,0 0 7px #fff,0 0 6px #fff;
+    color: #65a7ff;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 3.8em;
+}
+.title-background-main h1.non_asian_text {
+    font-weight: lighter;
+    font-family: sofia;
+}
+
+.title-background-main h1.non_asian_text.juliamo {
+    font-family: juliamo;
+}
+
+@media (max-width: 1200px) {
+    .title-background-main h1 {
+    font-size: 3em;
+    margin-right: 1.4rem;
+}
+}
+@media (max-width: 768px) {
+    .title-background-main h1 {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+}
+@media (max-width: 576px) {
+    .title-background-main h1 {
+    margin-top: -0.4rem;
+    margin-right: 0.6rem;
+}
 }
