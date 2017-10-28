@@ -919,20 +919,21 @@ a.name {
     padding-right: 15px;
     padding-left: 15px;
     width: 100%;
-}
-@media (min-width: 1200px)
-{.title-background-main-container {
     max-width: 1140px;
-}}
-@media (min-width: 992px){
-.title-background-main-container {
+}
+@media (max-width: 1200px)
+{.title-background-main-container {
     max-width: 960px;
 }}
-@media (min-width: 768px){
+@media (max-width: 992px){
 .title-background-main-container {
     max-width: 720px;
 }}
-@media (min-width: 576px){
+@media (max-width: 768px){
+.title-background-main-container {
+   max-width: 540px;
+}}
+@media (max-width: 576px){
 .title-background-main-container {
     max-width: 540px;
 }
