@@ -50,6 +50,13 @@
 .hljs-emphasis {
     font-style: italic
 }
+@font-face {
+    font-family: sofia;
+    src: url(fonts/sofia.woff2);
+}
+.sofia_font{
+    font-family: sofia;
+}
 body,
 html,
 input {
