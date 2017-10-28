@@ -67,6 +67,9 @@ body,
 html {
     height: 100%;
     font-size: 1rem;
+    background-image: url("pattern.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 ul {
     list-style: none;
