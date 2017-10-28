@@ -913,33 +913,43 @@ a.name {
 		display: block;
 	}
 }
-@media (min-width: 1200px)
-{.title-background-main-container {
-    max-width: 1140px;
-}}
-@media (min-width: 992px){
-.title-background-main-container {
-    max-width: 960px;
-}}
-@media (min-width: 768px){
-.title-background-main-container {
-    max-width: 720px;
-}}
-@media (min-width: 576px){
-.title-background-main-container {
-    max-width: 540px;
-}
-}
+
+
+
 .title-background-main-container {
     margin-right: auto;
     padding-right: 15px;
     padding-left: 15px;
     width: 100%;
 }
+@media (min-width: 1200px)
+{.title-background-main-container {
+    max-width: 1140px;
+}}
+@media (min-width: 768px){
+.title-background-main-container {
+    max-width: 720px;
+}}
+@media (min-width: 992px){
+.title-background-main-container {
+    max-width: 960px;
+}}
+@media (min-width: 576px){
+.title-background-main-container {
+    max-width: 540px;
+}
+}
+
 @media (min-width: 576px){
 .jumbotron {
     padding: 4rem 2rem;
 }
+}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
 }
 
 .title-background-main{
@@ -975,6 +985,9 @@ a.name {
     font-weight: 400;
     letter-spacing: 5px;
     font-size: 3.8em;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1.1;
 }
 .title-background-main h1.non_asian_text {
     font-weight: lighter;
