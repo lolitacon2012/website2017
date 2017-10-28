@@ -935,10 +935,16 @@ a.name {
 }}
 @media (max-width: 576px){
 .title-background-main-container {
-    max-width: 540px;
+    max-width: 100%;
 }
 }
 
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}
 @media (min-width: 576px){
 .jumbotron {
     padding: 4rem 2rem;
